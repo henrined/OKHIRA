@@ -1,0 +1,63 @@
+name: Render Video
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Target Platform (Call To Action)'
+        required: true
+        default: 'tiktok_bio'
+        type: choice
+        options:
+          - tiktok_bio
+          - insta_bio
+          - direct_msg
+          - snap_bio
+          - lien_desc
+          - dm_motcle
+          - site_web
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  render:
+    name: Render Remotion Video
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install NPM Dependencies
+        run: npm ci
+
+      - name: Render Video
+        run: |
+          mkdir -p out
+          PLATFORM="${{ github.event.inputs.platform || 'tiktok_bio' }}"
+          echo "Rendering for platform: $PLATFORM"
+          npx remotion render src/index.ts OkhiraAd out/okhira_video.mp4 \
+            --props="{\"platform\": \"$PLATFORM\"}" \
+            --gl=angle \
+            --chromium-options="--no-sandbox,--disable-gpu,--disable-dev-shm-usage"
+
+      - name: Upload Video Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: okhira_video_${{ github.event.inputs.platform || 'tiktok_bio' }}
+          path: out/okhira_video.mp4
+          if-no-files-found: error
+          retention-days: 14

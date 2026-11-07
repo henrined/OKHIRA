@@ -1,0 +1,1205 @@
+{
+ "s1": {
+  "duree_ms": 2256,
+  "son_debut_ms": 40,
+  "son_fin_ms": 2150,
+  "fiabilite_decoupage_phrases": "haute",
+  "pauses": [],
+  "phrases": [
+   {
+    "texte": "Combien de clients vous demandent votre prix…",
+    "startMs": 40,
+    "endMs": 2150,
+    "mots": [
+     {
+      "text": "Combien",
+      "startMs": 40,
+      "endMs": 424
+     },
+     {
+      "text": "de",
+      "startMs": 424,
+      "endMs": 615
+     },
+     {
+      "text": "clients",
+      "startMs": 615,
+      "endMs": 807
+     },
+     {
+      "text": "vous",
+      "startMs": 807,
+      "endMs": 999
+     },
+     {
+      "text": "demandent",
+      "startMs": 999,
+      "endMs": 1575
+     },
+     {
+      "text": "votre",
+      "startMs": 1575,
+      "endMs": 1958
+     },
+     {
+      "text": "prix…",
+      "startMs": 1958,
+      "endMs": 2150
+     }
+    ]
+   }
+  ]
+ },
+ "s2": {
+  "duree_ms": 5376,
+  "son_debut_ms": 10,
+  "son_fin_ms": 5290,
+  "fiabilite_decoupage_phrases": "haute (3 pauses et decoupage confirmes a l oreille)",
+  "pauses": [
+   {
+    "startMs": 1881,
+    "endMs": 2228
+   },
+   {
+    "startMs": 2688,
+    "endMs": 2931
+   },
+   {
+    "startMs": 3681,
+    "endMs": 4344
+   }
+  ],
+  "phrases": [
+   {
+    "texte": "…puis disparaissent",
+    "startMs": 10,
+    "endMs": 1881,
+    "mots": [
+     {
+      "text": "…puis",
+      "startMs": 10,
+      "endMs": 384
+     },
+     {
+      "text": "disparaissent",
+      "startMs": 384,
+      "endMs": 1881
+     }
+    ]
+   },
+   {
+    "texte": "sans un mot ?",
+    "startMs": 2228,
+    "endMs": 2688,
+    "mots": [
+     {
+      "text": "sans",
+      "startMs": 2228,
+      "endMs": 2343
+     },
+     {
+      "text": "un",
+      "startMs": 2343,
+      "endMs": 2458
+     },
+     {
+      "text": "mot",
+      "startMs": 2458,
+      "endMs": 2573
+     },
+     {
+      "text": "?",
+      "startMs": 2573,
+      "endMs": 2688
+     }
+    ]
+   },
+   {
+    "texte": "Ils lisent.",
+    "startMs": 2931,
+    "endMs": 3681,
+    "mots": [
+     {
+      "text": "Ils",
+      "startMs": 2931,
+      "endMs": 3181
+     },
+     {
+      "text": "lisent.",
+      "startMs": 3181,
+      "endMs": 3681
+     }
+    ]
+   },
+   {
+    "texte": "Et ils ne répondent plus.",
+    "startMs": 4344,
+    "endMs": 5290,
+    "mots": [
+     {
+      "text": "Et",
+      "startMs": 4344,
+      "endMs": 4479
+     },
+     {
+      "text": "ils",
+      "startMs": 4479,
+      "endMs": 4614
+     },
+     {
+      "text": "ne",
+      "startMs": 4614,
+      "endMs": 4749
+     },
+     {
+      "text": "répondent",
+      "startMs": 4749,
+      "endMs": 5155
+     },
+     {
+      "text": "plus.",
+      "startMs": 5155,
+      "endMs": 5290
+     }
+    ]
+   }
+  ]
+ },
+ "s3": {
+  "duree_ms": 7224,
+  "son_debut_ms": 40,
+  "son_fin_ms": 7110,
+  "fiabilite_decoupage_phrases": "haute",
+  "pauses": [
+   {
+    "startMs": 637,
+    "endMs": 1074
+   },
+   {
+    "startMs": 2223,
+    "endMs": 2611
+   },
+   {
+    "startMs": 3885,
+    "endMs": 4522
+   },
+   {
+    "startMs": 5689,
+    "endMs": 6024
+   }
+  ],
+  "phrases": [
+   {
+    "texte": "Pire :",
+    "startMs": 40,
+    "endMs": 637,
+    "mots": [
+     {
+      "text": "Pire",
+      "startMs": 40,
+      "endMs": 438
+     },
+     {
+      "text": ":",
+      "startMs": 438,
+      "endMs": 637
+     }
+    ]
+   },
+   {
+    "texte": "le livreur part,",
+    "startMs": 1074,
+    "endMs": 2223,
+    "mots": [
+     {
+      "text": "le",
+      "startMs": 1074,
+      "endMs": 1361
+     },
+     {
+      "text": "livreur",
+      "startMs": 1361,
+      "endMs": 1935
+     },
+     {
+      "text": "part,",
+      "startMs": 1935,
+      "endMs": 2223
+     }
+    ]
+   },
+   {
+    "texte": "le client ne décroche pas.",
+    "startMs": 2611,
+    "endMs": 3885,
+    "mots": [
+     {
+      "text": "le",
+      "startMs": 2611,
+      "endMs": 2823
+     },
+     {
+      "text": "client",
+      "startMs": 2823,
+      "endMs": 3035
+     },
+     {
+      "text": "ne",
+      "startMs": 3035,
+      "endMs": 3248
+     },
+     {
+      "text": "décroche",
+      "startMs": 3248,
+      "endMs": 3672
+     },
+     {
+      "text": "pas.",
+      "startMs": 3672,
+      "endMs": 3885
+     }
+    ]
+   },
+   {
+    "texte": "La course est perdue,",
+    "startMs": 4522,
+    "endMs": 5689,
+    "mots": [
+     {
+      "text": "La",
+      "startMs": 4522,
+      "endMs": 4814
+     },
+     {
+      "text": "course",
+      "startMs": 4814,
+      "endMs": 5106
+     },
+     {
+      "text": "est",
+      "startMs": 5106,
+      "endMs": 5397
+     },
+     {
+      "text": "perdue,",
+      "startMs": 5397,
+      "endMs": 5689
+     }
+    ]
+   },
+   {
+    "texte": "et c'est vous qui payez.",
+    "startMs": 6024,
+    "endMs": 7110,
+    "mots": [
+     {
+      "text": "et",
+      "startMs": 6024,
+      "endMs": 6241
+     },
+     {
+      "text": "c'est",
+      "startMs": 6241,
+      "endMs": 6458
+     },
+     {
+      "text": "vous",
+      "startMs": 6458,
+      "endMs": 6676
+     },
+     {
+      "text": "qui",
+      "startMs": 6676,
+      "endMs": 6893
+     },
+     {
+      "text": "payez.",
+      "startMs": 6893,
+      "endMs": 7110
+     }
+    ]
+   }
+  ]
+ },
+ "s4": {
+  "duree_ms": 4656,
+  "son_debut_ms": 20,
+  "son_fin_ms": 4550,
+  "fiabilite_decoupage_phrases": "haute",
+  "pauses": [
+   {
+    "startMs": 2564,
+    "endMs": 3200
+   }
+  ],
+  "phrases": [
+   {
+    "texte": "Ce qui vous manque, ce n'est pas du travail.",
+    "startMs": 20,
+    "endMs": 2564,
+    "mots": [
+     {
+      "text": "Ce",
+      "startMs": 20,
+      "endMs": 274
+     },
+     {
+      "text": "qui",
+      "startMs": 274,
+      "endMs": 529
+     },
+     {
+      "text": "vous",
+      "startMs": 529,
+      "endMs": 783
+     },
+     {
+      "text": "manque,",
+      "startMs": 783,
+      "endMs": 1038
+     },
+     {
+      "text": "ce",
+      "startMs": 1038,
+      "endMs": 1292
+     },
+     {
+      "text": "n'est",
+      "startMs": 1292,
+      "endMs": 1546
+     },
+     {
+      "text": "pas",
+      "startMs": 1546,
+      "endMs": 1801
+     },
+     {
+      "text": "du",
+      "startMs": 1801,
+      "endMs": 2055
+     },
+     {
+      "text": "travail.",
+      "startMs": 2055,
+      "endMs": 2564
+     }
+    ]
+   },
+   {
+    "texte": "C'est un protocole écrit.",
+    "startMs": 3200,
+    "endMs": 4550,
+    "mots": [
+     {
+      "text": "C'est",
+      "startMs": 3200,
+      "endMs": 3369
+     },
+     {
+      "text": "un",
+      "startMs": 3369,
+      "endMs": 3538
+     },
+     {
+      "text": "protocole",
+      "startMs": 3538,
+      "endMs": 4213
+     },
+     {
+      "text": "écrit.",
+      "startMs": 4213,
+      "endMs": 4550
+     }
+    ]
+   }
+  ]
+ },
+ "s5": {
+  "duree_ms": 11784,
+  "son_debut_ms": 40,
+  "son_fin_ms": 11660,
+  "fiabilite_decoupage_phrases": "moyenne",
+  "pauses": [
+   {
+    "startMs": 2305,
+    "endMs": 2762
+   },
+   {
+    "startMs": 4007,
+    "endMs": 4155
+   },
+   {
+    "startMs": 6062,
+    "endMs": 6400
+   },
+   {
+    "startMs": 9993,
+    "endMs": 10313
+   }
+  ],
+  "phrases": [
+   {
+    "texte": "Le Système Commercial WhatsApp Business :",
+    "startMs": 40,
+    "endMs": 2305,
+    "mots": [
+     {
+      "text": "Le",
+      "startMs": 40,
+      "endMs": 229
+     },
+     {
+      "text": "Système",
+      "startMs": 229,
+      "endMs": 606
+     },
+     {
+      "text": "Commercial",
+      "startMs": 606,
+      "endMs": 1172
+     },
+     {
+      "text": "WhatsApp",
+      "startMs": 1172,
+      "endMs": 1550
+     },
+     {
+      "text": "Business",
+      "startMs": 1550,
+      "endMs": 2116
+     },
+     {
+      "text": ":",
+      "startMs": 2116,
+      "endMs": 2305
+     }
+    ]
+   },
+   {
+    "texte": "huit modules de terrain,",
+    "startMs": 2762,
+    "endMs": 4007,
+    "mots": [
+     {
+      "text": "huit",
+      "startMs": 2762,
+      "endMs": 2940
+     },
+     {
+      "text": "modules",
+      "startMs": 2940,
+      "endMs": 3473
+     },
+     {
+      "text": "de",
+      "startMs": 3473,
+      "endMs": 3651
+     },
+     {
+      "text": "terrain,",
+      "startMs": 3651,
+      "endMs": 4007
+     }
+    ]
+   },
+   {
+    "texte": "vingt-cinq réponses prêtes à enregistrer.",
+    "startMs": 4155,
+    "endMs": 6062,
+    "mots": [
+     {
+      "text": "vingt-cinq",
+      "startMs": 4155,
+      "endMs": 4473
+     },
+     {
+      "text": "réponses",
+      "startMs": 4473,
+      "endMs": 4950
+     },
+     {
+      "text": "prêtes",
+      "startMs": 4950,
+      "endMs": 5267
+     },
+     {
+      "text": "à",
+      "startMs": 5267,
+      "endMs": 5426
+     },
+     {
+      "text": "enregistrer.",
+      "startMs": 5426,
+      "endMs": 6062
+     }
+    ]
+   },
+   {
+    "texte": "Cadrez le client dès la première question, sécurisez l'acompte de transport,",
+    "startMs": 6400,
+    "endMs": 9993,
+    "mots": [
+     {
+      "text": "Cadrez",
+      "startMs": 6400,
+      "endMs": 6759
+     },
+     {
+      "text": "le",
+      "startMs": 6759,
+      "endMs": 6939
+     },
+     {
+      "text": "client",
+      "startMs": 6939,
+      "endMs": 7118
+     },
+     {
+      "text": "dès",
+      "startMs": 7118,
+      "endMs": 7298
+     },
+     {
+      "text": "la",
+      "startMs": 7298,
+      "endMs": 7477
+     },
+     {
+      "text": "première",
+      "startMs": 7477,
+      "endMs": 8016
+     },
+     {
+      "text": "question,",
+      "startMs": 8016,
+      "endMs": 8376
+     },
+     {
+      "text": "sécurisez",
+      "startMs": 8376,
+      "endMs": 9094
+     },
+     {
+      "text": "l'acompte",
+      "startMs": 9094,
+      "endMs": 9454
+     },
+     {
+      "text": "de",
+      "startMs": 9454,
+      "endMs": 9633
+     },
+     {
+      "text": "transport,",
+      "startMs": 9633,
+      "endMs": 9993
+     }
+    ]
+   },
+   {
+    "texte": "protégez votre fonds de roulement.",
+    "startMs": 10313,
+    "endMs": 11660,
+    "mots": [
+     {
+      "text": "protégez",
+      "startMs": 10313,
+      "endMs": 10717
+     },
+     {
+      "text": "votre",
+      "startMs": 10717,
+      "endMs": 10987
+     },
+     {
+      "text": "fonds",
+      "startMs": 10987,
+      "endMs": 11121
+     },
+     {
+      "text": "de",
+      "startMs": 11121,
+      "endMs": 11256
+     },
+     {
+      "text": "roulement.",
+      "startMs": 11256,
+      "endMs": 11660
+     }
+    ]
+   }
+  ]
+ },
+ "s6": {
+  "duree_ms": 3672,
+  "son_debut_ms": 50,
+  "son_fin_ms": 3540,
+  "fiabilite_decoupage_phrases": "haute",
+  "pauses": [
+   {
+    "startMs": 1529,
+    "endMs": 1770
+   }
+  ],
+  "phrases": [
+   {
+    "texte": "Sans logiciel payant.",
+    "startMs": 50,
+    "endMs": 1529,
+    "mots": [
+     {
+      "text": "Sans",
+      "startMs": 50,
+      "endMs": 346
+     },
+     {
+      "text": "logiciel",
+      "startMs": 346,
+      "endMs": 1233
+     },
+     {
+      "text": "payant.",
+      "startMs": 1233,
+      "endMs": 1529
+     }
+    ]
+   },
+   {
+    "texte": "Directement sur votre téléphone.",
+    "startMs": 1770,
+    "endMs": 3540,
+    "mots": [
+     {
+      "text": "Directement",
+      "startMs": 1770,
+      "endMs": 2478
+     },
+     {
+      "text": "sur",
+      "startMs": 2478,
+      "endMs": 2655
+     },
+     {
+      "text": "votre",
+      "startMs": 2655,
+      "endMs": 3009
+     },
+     {
+      "text": "téléphone.",
+      "startMs": 3009,
+      "endMs": 3540
+     }
+    ]
+   }
+  ]
+ },
+ "s7": {
+  "duree_ms": 5112,
+  "son_debut_ms": 40,
+  "son_fin_ms": 4990,
+  "fiabilite_decoupage_phrases": "moyenne",
+  "pauses": [
+   {
+    "startMs": 1456,
+    "endMs": 1593
+   },
+   {
+    "startMs": 2580,
+    "endMs": 2898
+   }
+  ],
+  "phrases": [
+   {
+    "texte": "Deux mille cinq cents francs,",
+    "startMs": 40,
+    "endMs": 1456,
+    "mots": [
+     {
+      "text": "Deux",
+      "startMs": 40,
+      "endMs": 276
+     },
+     {
+      "text": "mille",
+      "startMs": 276,
+      "endMs": 748
+     },
+     {
+      "text": "cinq",
+      "startMs": 748,
+      "endMs": 984
+     },
+     {
+      "text": "cents",
+      "startMs": 984,
+      "endMs": 1220
+     },
+     {
+      "text": "francs,",
+      "startMs": 1220,
+      "endMs": 1456
+     }
+    ]
+   },
+   {
+    "texte": "au lieu de cinq mille.",
+    "startMs": 1593,
+    "endMs": 2580,
+    "mots": [
+     {
+      "text": "au",
+      "startMs": 1593,
+      "endMs": 1758
+     },
+     {
+      "text": "lieu",
+      "startMs": 1758,
+      "endMs": 1922
+     },
+     {
+      "text": "de",
+      "startMs": 1922,
+      "endMs": 2087
+     },
+     {
+      "text": "cinq",
+      "startMs": 2087,
+      "endMs": 2251
+     },
+     {
+      "text": "mille.",
+      "startMs": 2251,
+      "endMs": 2580
+     }
+    ]
+   },
+   {
+    "texte": "Une seule course évitée rembourse votre guide.",
+    "startMs": 2898,
+    "endMs": 4990,
+    "mots": [
+     {
+      "text": "Une",
+      "startMs": 2898,
+      "endMs": 3089
+     },
+     {
+      "text": "seule",
+      "startMs": 3089,
+      "endMs": 3469
+     },
+     {
+      "text": "course",
+      "startMs": 3469,
+      "endMs": 3659
+     },
+     {
+      "text": "évitée",
+      "startMs": 3659,
+      "endMs": 4039
+     },
+     {
+      "text": "rembourse",
+      "startMs": 4039,
+      "endMs": 4420
+     },
+     {
+      "text": "votre",
+      "startMs": 4420,
+      "endMs": 4800
+     },
+     {
+      "text": "guide.",
+      "startMs": 4800,
+      "endMs": 4990
+     }
+    ]
+   }
+  ]
+ },
+ "s8_tiktok_bio": {
+  "duree_ms": 2640,
+  "son_debut_ms": 60,
+  "son_fin_ms": 2490,
+  "fiabilite_decoupage_phrases": "haute",
+  "pauses": [],
+  "phrases": [
+   {
+    "texte": "Téléchargez-le maintenant : le lien est dans la bio.",
+    "startMs": 60,
+    "endMs": 2490,
+    "mots": [
+     {
+      "text": "Téléchargez-le",
+      "startMs": 60,
+      "endMs": 870
+     },
+     {
+      "text": "maintenant",
+      "startMs": 870,
+      "endMs": 1356
+     },
+     {
+      "text": ":",
+      "startMs": 1356,
+      "endMs": 1518
+     },
+     {
+      "text": "le",
+      "startMs": 1518,
+      "endMs": 1680
+     },
+     {
+      "text": "lien",
+      "startMs": 1680,
+      "endMs": 1842
+     },
+     {
+      "text": "est",
+      "startMs": 1842,
+      "endMs": 2004
+     },
+     {
+      "text": "dans",
+      "startMs": 2004,
+      "endMs": 2166
+     },
+     {
+      "text": "la",
+      "startMs": 2166,
+      "endMs": 2328
+     },
+     {
+      "text": "bio.",
+      "startMs": 2328,
+      "endMs": 2490
+     }
+    ]
+   }
+  ]
+ },
+ "s8_instagram_reels": {
+  "duree_ms": 2640,
+  "son_debut_ms": 60,
+  "son_fin_ms": 2490,
+  "fiabilite_decoupage_phrases": "haute",
+  "pauses": [],
+  "phrases": [
+   {
+    "texte": "Téléchargez-le maintenant : le lien est dans la bio.",
+    "startMs": 60,
+    "endMs": 2490,
+    "mots": [
+     {
+      "text": "Téléchargez-le",
+      "startMs": 60,
+      "endMs": 870
+     },
+     {
+      "text": "maintenant",
+      "startMs": 870,
+      "endMs": 1356
+     },
+     {
+      "text": ":",
+      "startMs": 1356,
+      "endMs": 1518
+     },
+     {
+      "text": "le",
+      "startMs": 1518,
+      "endMs": 1680
+     },
+     {
+      "text": "lien",
+      "startMs": 1680,
+      "endMs": 1842
+     },
+     {
+      "text": "est",
+      "startMs": 1842,
+      "endMs": 2004
+     },
+     {
+      "text": "dans",
+      "startMs": 2004,
+      "endMs": 2166
+     },
+     {
+      "text": "la",
+      "startMs": 2166,
+      "endMs": 2328
+     },
+     {
+      "text": "bio.",
+      "startMs": 2328,
+      "endMs": 2490
+     }
+    ]
+   }
+  ]
+ },
+ "s8_tiktok_pub_bouton": {
+  "duree_ms": 3264,
+  "son_debut_ms": 40,
+  "son_fin_ms": 3110,
+  "fiabilite_decoupage_phrases": "moyenne",
+  "pauses": [
+   {
+    "startMs": 1391,
+    "endMs": 1554
+   }
+  ],
+  "phrases": [
+   {
+    "texte": "Téléchargez-le maintenant :",
+    "startMs": 40,
+    "endMs": 1391,
+    "mots": [
+     {
+      "text": "Téléchargez-le",
+      "startMs": 40,
+      "endMs": 790
+     },
+     {
+      "text": "maintenant",
+      "startMs": 790,
+      "endMs": 1241
+     },
+     {
+      "text": ":",
+      "startMs": 1241,
+      "endMs": 1391
+     }
+    ]
+   },
+   {
+    "texte": "cliquez sur le bouton en bas.",
+    "startMs": 1554,
+    "endMs": 3110,
+    "mots": [
+     {
+      "text": "cliquez",
+      "startMs": 1554,
+      "endMs": 1943
+     },
+     {
+      "text": "sur",
+      "startMs": 1943,
+      "endMs": 2138
+     },
+     {
+      "text": "le",
+      "startMs": 2138,
+      "endMs": 2332
+     },
+     {
+      "text": "bouton",
+      "startMs": 2332,
+      "endMs": 2721
+     },
+     {
+      "text": "en",
+      "startMs": 2721,
+      "endMs": 2916
+     },
+     {
+      "text": "bas.",
+      "startMs": 2916,
+      "endMs": 3110
+     }
+    ]
+   }
+  ]
+ },
+ "s8_facebook": {
+  "duree_ms": 3192,
+  "son_debut_ms": 40,
+  "son_fin_ms": 3040,
+  "fiabilite_decoupage_phrases": "moyenne",
+  "pauses": [],
+  "phrases": [
+   {
+    "texte": "Téléchargez-le maintenant : le lien est dans la description.",
+    "startMs": 40,
+    "endMs": 3040,
+    "mots": [
+     {
+      "text": "Téléchargez-le",
+      "startMs": 40,
+      "endMs": 922
+     },
+     {
+      "text": "maintenant",
+      "startMs": 922,
+      "endMs": 1452
+     },
+     {
+      "text": ":",
+      "startMs": 1452,
+      "endMs": 1628
+     },
+     {
+      "text": "le",
+      "startMs": 1628,
+      "endMs": 1805
+     },
+     {
+      "text": "lien",
+      "startMs": 1805,
+      "endMs": 1981
+     },
+     {
+      "text": "est",
+      "startMs": 1981,
+      "endMs": 2158
+     },
+     {
+      "text": "dans",
+      "startMs": 2158,
+      "endMs": 2334
+     },
+     {
+      "text": "la",
+      "startMs": 2334,
+      "endMs": 2511
+     },
+     {
+      "text": "description.",
+      "startMs": 2511,
+      "endMs": 3040
+     }
+    ]
+   }
+  ]
+ },
+ "s8_facebook_instagram_pub": {
+  "duree_ms": 3504,
+  "son_debut_ms": 40,
+  "son_fin_ms": 3370,
+  "fiabilite_decoupage_phrases": "moyenne",
+  "pauses": [
+   {
+    "startMs": 1405,
+    "endMs": 2013
+   }
+  ],
+  "phrases": [
+   {
+    "texte": "Téléchargez-le maintenant :",
+    "startMs": 40,
+    "endMs": 1405,
+    "mots": [
+     {
+      "text": "Téléchargez-le",
+      "startMs": 40,
+      "endMs": 799
+     },
+     {
+      "text": "maintenant",
+      "startMs": 799,
+      "endMs": 1254
+     },
+     {
+      "text": ":",
+      "startMs": 1254,
+      "endMs": 1405
+     }
+    ]
+   },
+   {
+    "texte": "cliquez sur le bouton ci-dessous.",
+    "startMs": 2013,
+    "endMs": 3370,
+    "mots": [
+     {
+      "text": "cliquez",
+      "startMs": 2013,
+      "endMs": 2315
+     },
+     {
+      "text": "sur",
+      "startMs": 2315,
+      "endMs": 2465
+     },
+     {
+      "text": "le",
+      "startMs": 2465,
+      "endMs": 2616
+     },
+     {
+      "text": "bouton",
+      "startMs": 2616,
+      "endMs": 2918
+     },
+     {
+      "text": "ci-dessous.",
+      "startMs": 2918,
+      "endMs": 3370
+     }
+    ]
+   }
+  ]
+ },
+ "s8_youtube_shorts": {
+  "duree_ms": 3096,
+  "son_debut_ms": 40,
+  "son_fin_ms": 2960,
+  "fiabilite_decoupage_phrases": "moyenne",
+  "pauses": [],
+  "phrases": [
+   {
+    "texte": "Téléchargez-le maintenant : le lien est dans la description.",
+    "startMs": 40,
+    "endMs": 2960,
+    "mots": [
+     {
+      "text": "Téléchargez-le",
+      "startMs": 40,
+      "endMs": 899
+     },
+     {
+      "text": "maintenant",
+      "startMs": 899,
+      "endMs": 1414
+     },
+     {
+      "text": ":",
+      "startMs": 1414,
+      "endMs": 1586
+     },
+     {
+      "text": "le",
+      "startMs": 1586,
+      "endMs": 1758
+     },
+     {
+      "text": "lien",
+      "startMs": 1758,
+      "endMs": 1929
+     },
+     {
+      "text": "est",
+      "startMs": 1929,
+      "endMs": 2101
+     },
+     {
+      "text": "dans",
+      "startMs": 2101,
+      "endMs": 2273
+     },
+     {
+      "text": "la",
+      "startMs": 2273,
+      "endMs": 2445
+     },
+     {
+      "text": "description.",
+      "startMs": 2445,
+      "endMs": 2960
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+.env
+
+# Build and renders
+out
+build
+*.pcm
+test_*.mp3
+test_*.png
+test_*.mp4
+test_filter.txt
+.agents/
+.claude/
+_archive/

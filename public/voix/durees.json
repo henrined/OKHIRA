@@ -1,0 +1,80 @@
+{
+  "s1": {
+    "duree_originale": 3.0,
+    "duree_nette": 2.26,
+    "lufs_avant": -31.3,
+    "gain_db": 15.3
+  },
+  "s2": {
+    "duree_originale": 5.64,
+    "duree_nette": 5.38,
+    "lufs_avant": -33.9,
+    "gain_db": 17.9
+  },
+  "s3": {
+    "duree_originale": 7.47,
+    "duree_nette": 7.22,
+    "lufs_avant": -30.1,
+    "gain_db": 14.1
+  },
+  "s4": {
+    "duree_originale": 4.91,
+    "duree_nette": 4.66,
+    "lufs_avant": -32.5,
+    "gain_db": 16.5
+  },
+  "s5": {
+    "duree_originale": 12.12,
+    "duree_nette": 11.78,
+    "lufs_avant": -28.7,
+    "gain_db": 12.7
+  },
+  "s6": {
+    "duree_originale": 3.87,
+    "duree_nette": 3.67,
+    "lufs_avant": -24.0,
+    "gain_db": 8.0
+  },
+  "s7": {
+    "duree_originale": 5.33,
+    "duree_nette": 5.11,
+    "lufs_avant": -25.4,
+    "gain_db": 9.4
+  },
+  "s8_facebook": {
+    "duree_originale": 3.4,
+    "duree_nette": 3.19,
+    "lufs_avant": -23.8,
+    "gain_db": 7.8
+  },
+  "s8_facebook_instagram_pub": {
+    "duree_originale": 3.71,
+    "duree_nette": 3.5,
+    "lufs_avant": -24.9,
+    "gain_db": 8.9
+  },
+  "s8_tiktok_bio": {
+    "duree_originale": 2.85,
+    "duree_nette": 2.64,
+    "lufs_avant": -23.7,
+    "gain_db": 7.7
+  },
+  "s8_tiktok_pub_bouton": {
+    "duree_originale": 3.47,
+    "duree_nette": 3.26,
+    "lufs_avant": -24.4,
+    "gain_db": 8.4
+  },
+  "s8_youtube_shorts": {
+    "duree_originale": 3.16,
+    "duree_nette": 3.1,
+    "lufs_avant": -23.3,
+    "gain_db": 7.3
+  },
+  "s8_instagram_reels": {
+    "duree_originale": 2.85,
+    "duree_nette": 2.64,
+    "lufs_avant": -23.7,
+    "gain_db": 7.7
+  }
+}
