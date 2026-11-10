@@ -7,6 +7,7 @@ import {
   getTotalDurationFrames30s,
   FPS,
 } from "./scwb/durations";
+import { RootFormationSmq } from "./formation_smq/RootFormationSmq";
 
 export const RemotionRoot: React.FC = () => {
   const durationInFrames = getTotalDurationFrames(PLATEFORME);
@@ -14,6 +15,14 @@ export const RemotionRoot: React.FC = () => {
 
   return (
     <>
+      {/* ======================================================== */}
+      {/* FORMATION SMQ & PILOTAGE STATISTIQUE (ÉDITIONS DÉCISIO)  */}
+      {/* ======================================================== */}
+      <RootFormationSmq />
+
+      {/* ======================================================== */}
+      {/* PROJET SCWB / OKHIRA MOTION                              */}
+      {/* ======================================================== */}
       {/* Version standard complète (~45 secondes) */}
       <Composition
         id="ScwbAd"

@@ -3,9 +3,19 @@ name: Render Video
 on:
   workflow_dispatch:
     inputs:
-      platform:
-        description: 'Target Platform (Call To Action)'
+      target:
+        description: 'Quoi rendre ?'
         required: true
+        default: 'smq'
+        type: choice
+        options:
+          - smq           # Formation SMQ (toutes les capsules présentes)
+          - smq_cap0102   # Uniquement CAP-01-02 (rendu rapide)
+          - scwb          # Publicités SCWB
+          - all           # Tout rendre
+      platform:
+        description: 'Plateforme SCWB (ignoré si target=smq)'
+        required: false
         default: 'facebook'
         type: choice
         options:
@@ -21,9 +31,75 @@ on:
       - master
 
 jobs:
-  render:
-    name: Render Remotion Video
+  # ─────────────────────────────────────────────────────────────────
+  # JOB 1 : Formation SMQ — Capsules Remotion (Éditions Décisio)
+  # ─────────────────────────────────────────────────────────────────
+  render-smq:
+    name: Render Formation SMQ
     runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'push' ||
+      github.event.inputs.target == 'smq' ||
+      github.event.inputs.target == 'smq_cap0102' ||
+      github.event.inputs.target == 'all'
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install NPM Dependencies
+        run: npm ci
+
+      # ── Capsule CAP-01-01 : Causes communes vs Causes spéciales ──
+      - name: Render CAP-01-01 (Variabilité / Deming)
+        if: >
+          github.event.inputs.target != 'smq_cap0102'
+        run: |
+          mkdir -p out/smq
+          echo "▶ Rendu CAP-01-01 : Causes communes vs Causes spéciales"
+          npx remotion render src/index.ts SMQ-Mod01-Cap01-Variabilite \
+            out/smq/CAP-01-01_Variabilite_Deming.mp4 \
+            --gl=angle \
+            --chromium-options="--no-sandbox,--disable-gpu,--disable-dev-shm-usage"
+
+      # ── Capsule CAP-01-02 : Tolérances client vs Limites naturelles ──
+      - name: Render CAP-01-02 (USL/LSL vs UCL/LCL)
+        run: |
+          mkdir -p out/smq
+          echo "▶ Rendu CAP-01-02 : Tolérances client vs Limites naturelles"
+          npx remotion render src/index.ts SMQ-Mod01-Cap02-Tolerances \
+            out/smq/CAP-01-02_Tolerances_vs_Limites_Naturelles.mp4 \
+            --gl=angle \
+            --chromium-options="--no-sandbox,--disable-gpu,--disable-dev-shm-usage"
+
+      - name: Upload SMQ Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: formation_smq_${{ github.run_number }}
+          path: out/smq/*.mp4
+          if-no-files-found: error
+          retention-days: 30
+
+  # ─────────────────────────────────────────────────────────────────
+  # JOB 2 : Publicités SCWB / Okhira Motion
+  # ─────────────────────────────────────────────────────────────────
+  render-scwb:
+    name: Render SCWB Ads
+    runs-on: ubuntu-latest
+    if: >
+      github.event.inputs.target == 'scwb' ||
+      github.event.inputs.target == 'all'
 
     steps:
       - name: Checkout Repository
@@ -47,22 +123,22 @@ jobs:
         run: |
           mkdir -p out
           PLATFORM="${{ github.event.inputs.platform || 'facebook' }}"
-          echo "Rendering Full Video (45s) for platform: $PLATFORM"
+          echo "▶ Rendu SCWB Full (45s) — Plateforme : $PLATFORM"
           npx remotion render src/index.ts ScwbAd out/scwb_video_${PLATFORM}_45s.mp4 \
             --props="{\"platform\": \"$PLATFORM\"}" \
             --gl=angle \
             --chromium-options="--no-sandbox,--disable-gpu,--disable-dev-shm-usage"
 
-      - name: Render Short Video (<= 30s for Stories / Reels / Ads)
+      - name: Render Short Video (<= 30s)
         run: |
           PLATFORM="${{ github.event.inputs.platform || 'facebook' }}"
-          echo "Rendering Short Video (<= 30s) for platform: $PLATFORM"
+          echo "▶ Rendu SCWB Court (30s) — Plateforme : $PLATFORM"
           npx remotion render src/index.ts ScwbAd30s out/scwb_video_${PLATFORM}_30s.mp4 \
             --props="{\"platform\": \"$PLATFORM\"}" \
             --gl=angle \
             --chromium-options="--no-sandbox,--disable-gpu,--disable-dev-shm-usage"
 
-      - name: Upload Videos Artifact
+      - name: Upload SCWB Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: scwb_videos_${{ github.event.inputs.platform || 'facebook' }}
