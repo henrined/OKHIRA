@@ -43,20 +43,29 @@ jobs:
       - name: Install NPM Dependencies
         run: npm ci
 
-      - name: Render Video
+      - name: Render Full Video (45s)
         run: |
           mkdir -p out
           PLATFORM="${{ github.event.inputs.platform || 'facebook' }}"
-          echo "Rendering for platform: $PLATFORM"
-          npx remotion render src/index.ts ScwbAd out/scwb_video.mp4 \
+          echo "Rendering Full Video (45s) for platform: $PLATFORM"
+          npx remotion render src/index.ts ScwbAd out/scwb_video_${PLATFORM}_45s.mp4 \
             --props="{\"platform\": \"$PLATFORM\"}" \
             --gl=angle \
             --chromium-options="--no-sandbox,--disable-gpu,--disable-dev-shm-usage"
 
-      - name: Upload Video Artifact
+      - name: Render Short Video (<= 30s for Stories / Reels / Ads)
+        run: |
+          PLATFORM="${{ github.event.inputs.platform || 'facebook' }}"
+          echo "Rendering Short Video (<= 30s) for platform: $PLATFORM"
+          npx remotion render src/index.ts ScwbAd30s out/scwb_video_${PLATFORM}_30s.mp4 \
+            --props="{\"platform\": \"$PLATFORM\"}" \
+            --gl=angle \
+            --chromium-options="--no-sandbox,--disable-gpu,--disable-dev-shm-usage"
+
+      - name: Upload Videos Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: scwb_video_${{ github.event.inputs.platform || 'facebook' }}
-          path: out/scwb_video.mp4
+          name: scwb_videos_${{ github.event.inputs.platform || 'facebook' }}
+          path: out/*.mp4
           if-no-files-found: error
           retention-days: 14

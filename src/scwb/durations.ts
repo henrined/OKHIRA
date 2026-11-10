@@ -4,7 +4,9 @@ import { PlatformType, SceneTiming, VoiceRythme } from "./types";
 
 export const FPS = 30;
 export const PAUSE_SEC = 0.3; // 0.3s pause between scenes
+export const PAUSE_30S_SEC = 0.267; // ~8 frames pause for <=30s version
 export const TRANSITION_FRAMES = 9; // 0.3s * 30 fps = 9 frames
+export const TRANSITION_30S_FRAMES = 12; // 0.4s smooth transition for 30s version
 
 // Default target platform (can be changed to any supported PlatformType)
 export const DEFAULT_PLATFORM: PlatformType = "facebook";
@@ -83,6 +85,64 @@ export const getTotalDurationFrames = (
   platform: PlatformType = DEFAULT_PLATFORM
 ): number => {
   const timings = getSceneTimings(platform);
+  const lastScene = timings[timings.length - 1];
+  return lastScene.endFrame;
+};
+
+export const getSceneTimings30s = (platform: PlatformType = DEFAULT_PLATFORM): SceneTiming[] => {
+  const scenesConfig = [
+    { id: "scene1", voiceKey: "s1", voiceFile: "s1.mp3", title: "L'accroche" },
+    { id: "scene2", voiceKey: "s2", voiceFile: "s2.mp3", title: "Le silence" },
+    { id: "scene5", voiceKey: "s5", voiceFile: "s5.mp3", title: "La solution" },
+    { id: "scene7", voiceKey: "s7", voiceFile: "s7.mp3", title: "Le prix" },
+    {
+      id: "scene8",
+      voiceKey: `s8_${platform}`,
+      voiceFile: `s8_${platform}.mp3`,
+      title: "Appel à l'action",
+    },
+  ];
+
+  const pauseFrames = 8; // exactly 8 frames = ~0.267s
+  let currentFrame = 0;
+
+  return scenesConfig.map((sc) => {
+    const raw = dureesRecord[sc.voiceKey];
+    const voiceSec = raw ? raw.duree_nette : 3.0;
+    const voiceFrames = Math.round(voiceSec * FPS);
+    const durationFrames = voiceFrames + pauseFrames;
+    const durationSec = durationFrames / FPS;
+
+    const startFrame = currentFrame;
+    const startSec = startFrame / FPS;
+    const endFrame = startFrame + durationFrames;
+    const endSec = endFrame / FPS;
+
+    currentFrame = endFrame;
+
+    return {
+      id: sc.id,
+      voiceKey: sc.voiceKey,
+      voiceFile: sc.voiceFile,
+      title: sc.title,
+      voiceSec,
+      voiceFrames,
+      pauseSec: PAUSE_30S_SEC,
+      pauseFrames,
+      durationSec,
+      durationFrames,
+      startSec,
+      startFrame,
+      endSec,
+      endFrame,
+    };
+  });
+};
+
+export const getTotalDurationFrames30s = (
+  platform: PlatformType = DEFAULT_PLATFORM
+): number => {
+  const timings = getSceneTimings30s(platform);
   const lastScene = timings[timings.length - 1];
   return lastScene.endFrame;
 };
