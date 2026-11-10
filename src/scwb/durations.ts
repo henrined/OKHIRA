@@ -1,5 +1,5 @@
-import dureesData from "../public/voix/durees.json";
-import rythmeData from "../public/voix/rythme_final.json";
+import dureesData from "../../public/scwb/voix/durees.json";
+import rythmeData from "../../public/scwb/voix/rythme_final.json";
 import { PlatformType, SceneTiming, VoiceRythme } from "./types";
 
 export const FPS = 30;
@@ -7,7 +7,7 @@ export const PAUSE_SEC = 0.3; // 0.3s pause between scenes
 export const TRANSITION_FRAMES = 9; // 0.3s * 30 fps = 9 frames
 
 // Default target platform (can be changed to any supported PlatformType)
-export const DEFAULT_PLATFORM: PlatformType = "tiktok_bio";
+export const DEFAULT_PLATFORM: PlatformType = "facebook";
 
 interface RawDureeEntry {
   duree_originale: number;

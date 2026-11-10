@@ -94,9 +94,9 @@ export const Scene4: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
             scale: `${foldScale}`,
           }}
         >
-          <Img src={staticFile("assets_okhira/carte_perte_1.png")} style={{ width: "100%" }} />
-          <Img src={staticFile("assets_okhira/carte_perte_2.png")} style={{ width: "100%" }} />
-          <Img src={staticFile("assets_okhira/carte_perte_3.png")} style={{ width: "100%" }} />
+          <Img src={staticFile("scwb/assets/carte_perte_1.png")} style={{ width: "100%" }} />
+          <Img src={staticFile("scwb/assets/carte_perte_2.png")} style={{ width: "100%" }} />
+          <Img src={staticFile("scwb/assets/carte_perte_3.png")} style={{ width: "100%" }} />
         </div>
       )}
 

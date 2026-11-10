@@ -38,7 +38,7 @@ export const Scene1: React.FC = () => {
 
       {/* African merchant surprised character entering from left */}
       <Character
-        imageSrc="perso_commercant_surpris.png"
+        imageSrc="scwb/perso_commercant_surpris.png"
         side="left"
         width={580}
         bottom={40}
@@ -56,7 +56,7 @@ export const Scene1: React.FC = () => {
         }}
       >
         <PhoneMock
-          imageSrc="assets_okhira/phone_chat_1_question.png"
+          imageSrc="scwb/assets/phone_chat_1_question.png"
           width={530}
           rotateX={8}
           rotateY={-18}

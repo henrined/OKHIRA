@@ -37,7 +37,7 @@ interface OkhiraAdProps {
   platform?: PlatformType;
 }
 
-export const OkhiraAd: React.FC<OkhiraAdProps> = ({
+export const ScwbAd: React.FC<OkhiraAdProps> = ({
   platform = PLATEFORME,
 }) => {
   const timings = getSceneTimings(platform);
@@ -165,7 +165,7 @@ export const OkhiraAd: React.FC<OkhiraAdProps> = ({
       </TransitionSeries>
 
       {/* Complete Studio-mixed Soundtrack (All 8 scene voiceovers + background music at 0.12) */}
-      <Audio src={staticFile("audio_mix.mp3")} />
+      <Audio src={staticFile("scwb/audio_mix.mp3")} />
     </AbsoluteFill>
   );
 };

@@ -12,7 +12,7 @@ interface Scene8Props {
 }
 
 export const Scene8: React.FC<Scene8Props> = ({
-  platform = "tiktok_bio",
+  platform = "facebook",
   voiceOffsetFrames = 0,
 }) => {
   const frame = useCurrentFrame();
@@ -53,7 +53,7 @@ export const Scene8: React.FC<Scene8Props> = ({
         }}
       >
         <Img
-          src={staticFile("produit/logo_okhira.png")}
+          src={staticFile("scwb/produit/logo_okhira.png")}
           style={{ width: "100%", height: "auto", display: "block" }}
         />
       </div>
@@ -61,7 +61,7 @@ export const Scene8: React.FC<Scene8Props> = ({
       {/* Kinetic Voiceover Text matching selected platform's audio */}
       <KineticText
         phrases={rythme.phrases}
-        keywords={["Téléchargez-le", "maintenant", "bio", "bouton", "lien"]}
+        keywords={["Téléchargez-le", "maintenant", "description", "bouton", "lien"]}
         fontSize={54}
         keywordFontSize={64}
         offsetFrames={voiceOffsetFrames}
@@ -83,7 +83,7 @@ export const Scene8: React.FC<Scene8Props> = ({
         }}
       >
         <Img
-          src={staticFile("produit/bouton_achat.png")}
+          src={staticFile("scwb/produit/bouton_achat.png")}
           style={{ width: "100%", height: "auto", display: "block" }}
         />
       </div>

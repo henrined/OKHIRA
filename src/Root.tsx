@@ -1,7 +1,7 @@
 import React from "react";
 import { Composition } from "remotion";
-import { OkhiraAd, PLATEFORME } from "./OkhiraAd";
-import { getTotalDurationFrames, FPS } from "./durations";
+import { ScwbAd, PLATEFORME } from "./scwb/ScwbAd";
+import { getTotalDurationFrames, FPS } from "./scwb/durations";
 
 export const RemotionRoot: React.FC = () => {
   const durationInFrames = getTotalDurationFrames(PLATEFORME);
@@ -9,8 +9,8 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="OkhiraAd"
-        component={OkhiraAd}
+        id="ScwbAd"
+        component={ScwbAd}
         durationInFrames={durationInFrames}
         fps={FPS}
         width={1080}

@@ -84,7 +84,7 @@ export const Scene2: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
       >
         <div style={{ position: "relative", width: "100%" }}>
           <Img
-            src={staticFile("assets_okhira/phone_chat_1_question.png")}
+            src={staticFile("scwb/assets/phone_chat_1_question.png")}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
 
@@ -99,7 +99,7 @@ export const Scene2: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
             }}
           >
             <Img
-              src={staticFile("assets_okhira/phone_chat_2_reponse.png")}
+              src={staticFile("scwb/assets/phone_chat_2_reponse.png")}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
@@ -115,7 +115,7 @@ export const Scene2: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
             }}
           >
             <Img
-              src={staticFile("assets_okhira/phone_chat_silence.png")}
+              src={staticFile("scwb/assets/phone_chat_silence.png")}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
 

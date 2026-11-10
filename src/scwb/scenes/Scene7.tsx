@@ -89,7 +89,7 @@ export const Scene7: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
           }}
         >
           <Img
-            src={staticFile("produit/livre_3d.png")}
+            src={staticFile("scwb/produit/livre_3d.png")}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
@@ -109,7 +109,7 @@ export const Scene7: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
       >
         <div style={{ position: "relative", width: 540 }}>
           <Img
-            src={staticFile("produit/badge_prix_C.png")}
+            src={staticFile("scwb/produit/badge_prix_C.png")}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
 

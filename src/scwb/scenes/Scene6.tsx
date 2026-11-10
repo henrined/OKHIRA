@@ -55,7 +55,7 @@ export const Scene6: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
         }}
       >
         <PhoneMock
-          imageSrc="assets_okhira/phone_guide.png"
+          imageSrc="scwb/assets/phone_guide.png"
           width={520}
           rotateX={6}
           rotateY={-16}
@@ -67,7 +67,7 @@ export const Scene6: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
 
       {/* African smiling female shop owner character entering from left */}
       <Character
-        imageSrc="perso_commercante_sourire.png"
+        imageSrc="scwb/perso_commercante_sourire.png"
         side="left"
         width={580}
         bottom={40}

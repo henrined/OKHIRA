@@ -62,7 +62,7 @@ export const Scene3: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
 
       {/* Delivery person character entering from right */}
       <Character
-        imageSrc="perso_livreur_agace.png"
+        imageSrc="scwb/perso_livreur_agace.png"
         side="right"
         width={560}
         bottom={40}
@@ -97,7 +97,7 @@ export const Scene3: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
             }}
           >
             <Img
-              src={staticFile("assets_okhira/carte_perte_1.png")}
+              src={staticFile("scwb/assets/carte_perte_1.png")}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
@@ -117,7 +117,7 @@ export const Scene3: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
             }}
           >
             <Img
-              src={staticFile("assets_okhira/carte_perte_2.png")}
+              src={staticFile("scwb/assets/carte_perte_2.png")}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
@@ -137,7 +137,7 @@ export const Scene3: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
             }}
           >
             <Img
-              src={staticFile("assets_okhira/carte_perte_3.png")}
+              src={staticFile("scwb/assets/carte_perte_3.png")}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>

@@ -31,7 +31,8 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
-    "render": "remotion render src/index.ts OkhiraAd out/okhira_video.mp4",
+    "render": "remotion render src/index.ts ScwbAd out/scwb_video.mp4",
+    "render:scwb": "remotion render src/index.ts ScwbAd out/scwb_video.mp4",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },

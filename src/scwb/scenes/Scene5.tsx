@@ -124,9 +124,9 @@ export const Scene5: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
               imageSrc={
                 showQuickReply
                   ? replyInserted
-                    ? "assets_okhira/phone_reponse_inseree.png"
-                    : "assets_okhira/phone_raccourci_prix.png"
-                  : "assets_okhira/phone_guide.png"
+                    ? "scwb/assets/phone_reponse_inseree.png"
+                    : "scwb/assets/phone_raccourci_prix.png"
+                  : "scwb/assets/phone_guide.png"
               }
               width={480}
               rotateX={8}
@@ -190,7 +190,7 @@ export const Scene5: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
                 }}
               >
                 <Img
-                  src={staticFile("assets_okhira/carte_module_1.png")}
+                  src={staticFile("scwb/assets/carte_module_1.png")}
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />
                 <div
@@ -223,7 +223,7 @@ export const Scene5: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
                 }}
               >
                 <Img
-                  src={staticFile("assets_okhira/carte_module_2.png")}
+                  src={staticFile("scwb/assets/carte_module_2.png")}
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />
                 <div
@@ -256,7 +256,7 @@ export const Scene5: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
                 }}
               >
                 <Img
-                  src={staticFile("assets_okhira/carte_module_3.png")}
+                  src={staticFile("scwb/assets/carte_module_3.png")}
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />
                 <div
@@ -291,8 +291,8 @@ export const Scene5: React.FC<SceneProps> = ({ voiceOffsetFrames = 0 }) => {
             <Img
               src={staticFile(
                 currentMs >= 8500
-                  ? "assets_okhira/phone_reponse_inseree.png"
-                  : "assets_okhira/phone_raccourci_prix.png"
+                  ? "scwb/assets/phone_reponse_inseree.png"
+                  : "scwb/assets/phone_raccourci_prix.png"
               )}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
