@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Audio, staticFile } from "remotion";
 import { TransitionSeries, linearTiming } from "@remotion/transitions";
 import { fade } from "@remotion/transitions/fade";
 
@@ -27,14 +27,18 @@ export const Mod01Capsule02: React.FC<Mod01Capsule02Props> = () => {
     return sc.frames + (isLast ? PAUSE_FRAMES : PAUSE_FRAMES + TRANSITION_FRAMES);
   });
 
+  const voicePath = (file: string) =>
+    staticFile(`formation_smq/modules/mod01_variabilite_fondations/voix/${file}`);
+
   return (
     <AbsoluteFill style={{ backgroundColor: DECISIO_NEUTRALS.white }}>
       <TransitionSeries>
-        {/* Scène 1 : Le quiproquo industriel Spécification vs Variation */}
+        {/* Scène 1 : Le quiproquo industriel Spécification et Variabilité */}
         <TransitionSeries.Sequence
           name="S1 - Quiproquo Spécification"
           durationInFrames={sequenceDurations[0]}
         >
+          <Audio src={voicePath("cap02_s1.mp3")} />
           <Cap02Scene1_Probleme />
         </TransitionSeries.Sequence>
 
@@ -43,11 +47,12 @@ export const Mod01Capsule02: React.FC<Mod01Capsule02Props> = () => {
           timing={linearTiming({ durationInFrames: TRANSITION_FRAMES })}
         />
 
-        {/* Scène 2 : Anatomie Graphique : Voix Client vs Voix Procédé */}
+        {/* Scène 2 : Anatomie Graphique : Voix du Client et Voix du Procédé */}
         <TransitionSeries.Sequence
           name="S2 - Anatomie Graphique"
           durationInFrames={sequenceDurations[1]}
         >
+          <Audio src={voicePath("cap02_s2.mp3")} />
           <Cap02Scene2_AnatomieGraphique />
         </TransitionSeries.Sequence>
 
@@ -61,6 +66,7 @@ export const Mod01Capsule02: React.FC<Mod01Capsule02Props> = () => {
           name="S3 - Formalisation ISO 22514-1"
           durationInFrames={sequenceDurations[2]}
         >
+          <Audio src={voicePath("cap02_s3.mp3")} />
           <Cap02Scene3_FormalisationISO />
         </TransitionSeries.Sequence>
 
@@ -69,11 +75,12 @@ export const Mod01Capsule02: React.FC<Mod01Capsule02Props> = () => {
           timing={linearTiming({ durationInFrames: TRANSITION_FRAMES })}
         />
 
-        {/* Scène 4 : Matrice 2x2 Stabilité vs Capabilité */}
+        {/* Scène 4 : Matrice 2x2 Stabilité et Capabilité */}
         <TransitionSeries.Sequence
           name="S4 - Matrice 4 Quadrants"
           durationInFrames={sequenceDurations[3]}
         >
+          <Audio src={voicePath("cap02_s4.mp3")} />
           <Cap02Scene4_MatriceQuadrants />
         </TransitionSeries.Sequence>
 
@@ -87,6 +94,7 @@ export const Mod01Capsule02: React.FC<Mod01Capsule02Props> = () => {
           name="S5 - Rappel Actif"
           durationInFrames={sequenceDurations[4]}
         >
+          <Audio src={voicePath("cap02_s5.mp3")} />
           <Cap02Scene5_RappelActif />
         </TransitionSeries.Sequence>
 
@@ -100,6 +108,7 @@ export const Mod01Capsule02: React.FC<Mod01Capsule02Props> = () => {
           name="S6 - Gouvernance Metrologique"
           durationInFrames={sequenceDurations[5]}
         >
+          <Audio src={voicePath("cap02_s6.mp3")} />
           <Cap02Scene6_Gouvernance />
         </TransitionSeries.Sequence>
       </TransitionSeries>

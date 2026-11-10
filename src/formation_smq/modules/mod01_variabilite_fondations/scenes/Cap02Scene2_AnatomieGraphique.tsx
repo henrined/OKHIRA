@@ -15,8 +15,6 @@ export const Cap02Scene2_AnatomieGraphique: React.FC = () => {
   const pair = DECISIO_CHROMATIC_PAIRS.tomeX_spc;
   const enter = spring({ frame, fps, config: { damping: 14 } });
 
-  // Phase 1 : Explication des grandeurs
-  // Phase 2 (après frame 120) : Révélation de l'hérésie méthodologique
   const showHeresy = frame > 80;
 
   const legendFade = interpolate(frame, [15, 40], [0, 1], {
@@ -35,12 +33,12 @@ export const Cap02Scene2_AnatomieGraphique: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          top: 210,
+          top: 200,
           left: 100,
           right: 100,
           display: "flex",
           flexDirection: "column",
-          gap: 16,
+          gap: 20,
           opacity: enter,
         }}
       >
@@ -48,7 +46,7 @@ export const Cap02Scene2_AnatomieGraphique: React.FC = () => {
           <div
             style={{
               fontFamily: DECISIO_FONTS.serif,
-              fontSize: 32,
+              fontSize: 48,
               fontWeight: 600,
               color: pair.C,
             }}
@@ -58,12 +56,12 @@ export const Cap02Scene2_AnatomieGraphique: React.FC = () => {
           <div
             style={{
               fontFamily: DECISIO_FONTS.code,
-              fontSize: 14,
+              fontSize: 22,
               color: DECISIO_NEUTRALS.textSecondary,
               opacity: legendFade,
             }}
           >
-            Courbe noire : Pièces X ~ N(μ, σ²)  |  Courbe bleue : Échantillons X̄ ~ N(μ, σ²/n)
+            Courbe noire : pièces X ∼ N(μ, σ²) &nbsp;|&nbsp; Courbe bleue : moyennes X̄ ∼ N(μ, σ²/n)
           </div>
         </div>
 
@@ -75,61 +73,107 @@ export const Cap02Scene2_AnatomieGraphique: React.FC = () => {
           />
         </div>
 
-        {/* 3 Cartouches explicatifs synchronisés sous le graphique */}
+        {/* 3 cartouches explicatifs */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr 1fr",
-            gap: 20,
+            gap: 24,
             opacity: legendFade,
-            marginTop: 4,
+            marginTop: 8,
           }}
         >
           <div
             style={{
-              borderLeft: "4px solid #AA0E1B",
+              borderLeft: `5px solid ${DECISIO_CHROMATIC_PAIRS.tomeII_desc.C}`,
               backgroundColor: DECISIO_NEUTRALS.codeBg,
-              padding: "12px 16px",
-              borderRadius: 4,
+              padding: "16px 22px",
+              borderRadius: 6,
             }}
           >
-            <div style={{ fontFamily: DECISIO_FONTS.code, fontSize: 13, fontWeight: 600, color: "#AA0E1B" }}>
-              LSL / USL (Cahier des charges)
+            <div
+              style={{
+                fontFamily: DECISIO_FONTS.code,
+                fontSize: 22,
+                fontWeight: 600,
+                color: DECISIO_CHROMATIC_PAIRS.tomeII_desc.C,
+                marginBottom: 8,
+              }}
+            >
+              LSL / USL
             </div>
-            <div style={{ fontFamily: DECISIO_FONTS.serif, fontSize: 15, color: DECISIO_NEUTRALS.textMain, marginTop: 4 }}>
-              Appliquées à <strong>chaque pièce individuelle</strong>. Définissent la conformité marchande.
+            <div
+              style={{
+                fontFamily: DECISIO_FONTS.serif,
+                fontSize: 28,
+                color: DECISIO_NEUTRALS.textMain,
+                lineHeight: 1.4,
+              }}
+            >
+              Spécifications client. Appliquées à chaque{" "}
+              <strong>pièce individuelle</strong>.
             </div>
           </div>
 
           <div
             style={{
-              borderLeft: `4px solid ${DECISIO_NEUTRALS.textSecondary}`,
+              borderLeft: `5px solid ${DECISIO_NEUTRALS.textSecondary}`,
               backgroundColor: DECISIO_NEUTRALS.codeBg,
-              padding: "12px 16px",
-              borderRadius: 4,
+              padding: "16px 22px",
+              borderRadius: 6,
             }}
           >
-            <div style={{ fontFamily: DECISIO_FONTS.code, fontSize: 13, fontWeight: 600, color: DECISIO_NEUTRALS.textSecondary }}>
-              LNTL / UNTL (Dispersion 6σ)
+            <div
+              style={{
+                fontFamily: DECISIO_FONTS.code,
+                fontSize: 22,
+                fontWeight: 600,
+                color: DECISIO_NEUTRALS.textSecondary,
+                marginBottom: 8,
+              }}
+            >
+              LNTL / UNTL
             </div>
-            <div style={{ fontFamily: DECISIO_FONTS.serif, fontSize: 15, color: DECISIO_NEUTRALS.textMain, marginTop: 4 }}>
-              Limites naturelles du procédé : [μ - 3σ, μ + 3σ]. Englobent 99,73 % du flux sans dérive.
+            <div
+              style={{
+                fontFamily: DECISIO_FONTS.serif,
+                fontSize: 28,
+                color: DECISIO_NEUTRALS.textMain,
+                lineHeight: 1.4,
+              }}
+            >
+              Limites naturelles 6σ du procédé. Englobent 99,73 % du flux.
             </div>
           </div>
 
           <div
             style={{
-              borderLeft: `4px solid ${pair.C}`,
+              borderLeft: `5px solid ${pair.C}`,
               backgroundColor: DECISIO_NEUTRALS.codeBg,
-              padding: "12px 16px",
-              borderRadius: 4,
+              padding: "16px 22px",
+              borderRadius: 6,
             }}
           >
-            <div style={{ fontFamily: DECISIO_FONTS.code, fontSize: 13, fontWeight: 600, color: pair.C }}>
-              LCL / UCL (Cartes de Contrôle X̄)
+            <div
+              style={{
+                fontFamily: DECISIO_FONTS.code,
+                fontSize: 22,
+                fontWeight: 600,
+                color: pair.C,
+                marginBottom: 8,
+              }}
+            >
+              LCL / UCL
             </div>
-            <div style={{ fontFamily: DECISIO_FONTS.serif, fontSize: 15, color: DECISIO_NEUTRALS.textMain, marginTop: 4 }}>
-              Appliquées aux <strong>moyennes de lots</strong> (n=4 ou 5). Détectent les dérives de centrage.
+            <div
+              style={{
+                fontFamily: DECISIO_FONTS.serif,
+                fontSize: 28,
+                color: DECISIO_NEUTRALS.textMain,
+                lineHeight: 1.4,
+              }}
+            >
+              Limites Shewhart. Appliquées aux <strong>moyennes</strong> de sous-groupes.
             </div>
           </div>
         </div>

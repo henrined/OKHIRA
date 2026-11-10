@@ -26,9 +26,9 @@ export const Cap02Scene6_Gouvernance: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          top: 210,
-          left: 110,
-          right: 110,
+          top: 195,
+          left: 100,
+          right: 100,
           display: "flex",
           flexDirection: "column",
           gap: 22,
@@ -38,7 +38,7 @@ export const Cap02Scene6_Gouvernance: React.FC = () => {
         <div
           style={{
             fontFamily: DECISIO_FONTS.serif,
-            fontSize: 32,
+            fontSize: 48,
             fontWeight: 600,
             color: pair.C,
           }}
@@ -52,7 +52,7 @@ export const Cap02Scene6_Gouvernance: React.FC = () => {
             width: "100%",
             borderCollapse: "collapse",
             fontFamily: DECISIO_FONTS.serif,
-            fontSize: 17,
+            fontSize: 26,
             color: DECISIO_NEUTRALS.textMain,
           }}
         >
@@ -60,56 +60,56 @@ export const Cap02Scene6_Gouvernance: React.FC = () => {
             <tr
               style={{
                 borderTop: `2px solid ${DECISIO_NEUTRALS.textMain}`,
-                borderBottom: `1.5px solid ${pair.C}`,
+                borderBottom: `2px solid ${pair.C}`,
                 backgroundColor: pair.F,
               }}
             >
-              <th style={{ padding: "12px 16px", textAlign: "left", width: "18%" }}>Dimension</th>
-              <th style={{ padding: "12px 16px", textAlign: "left", width: "41%", color: alertPair.C }}>
+              <th style={{ padding: "16px 20px", textAlign: "left", width: "18%", fontSize: 26 }}>Dimension</th>
+              <th style={{ padding: "16px 20px", textAlign: "left", width: "41%", color: alertPair.C, fontSize: 26 }}>
                 Tolérances Client (LSL / USL)
               </th>
-              <th style={{ padding: "12px 16px", textAlign: "left", width: "41%", color: pair.C }}>
+              <th style={{ padding: "16px 20px", textAlign: "left", width: "41%", color: pair.C, fontSize: 26 }}>
                 Limites de Contrôle (LCL / UCL sur X̄)
               </th>
             </tr>
           </thead>
           <tbody>
             <tr style={{ borderBottom: `1px solid ${DECISIO_NEUTRALS.structural}` }}>
-              <td style={{ padding: "12px 16px", fontWeight: 600 }}>Origine</td>
-              <td style={{ padding: "12px 16px" }}>
+              <td style={{ padding: "16px 20px", fontWeight: 600 }}>Origine</td>
+              <td style={{ padding: "16px 20px", lineHeight: 1.4 }}>
                 <strong>Externe</strong> : Cahier des charges, bureau d'études, contrat client.
               </td>
-              <td style={{ padding: "12px 16px" }}>
+              <td style={{ padding: "16px 20px", lineHeight: 1.4 }}>
                 <strong>Interne</strong> : Données empiriques du procédé sous causes communes.
               </td>
             </tr>
 
             <tr style={{ borderBottom: `1px solid ${DECISIO_NEUTRALS.structural}` }}>
-              <td style={{ padding: "12px 16px", fontWeight: 600 }}>Application</td>
-              <td style={{ padding: "12px 16px" }}>
+              <td style={{ padding: "16px 20px", fontWeight: 600 }}>Application</td>
+              <td style={{ padding: "16px 20px", lineHeight: 1.4 }}>
                 Aux <strong>pièces unitaires</strong> (mesures individuelles X).
               </td>
-              <td style={{ padding: "12px 16px" }}>
+              <td style={{ padding: "16px 20px", lineHeight: 1.4 }}>
                 Aux <strong>statistiques d'échantillons</strong> (moyennes X̄, étendues R).
               </td>
             </tr>
 
             <tr style={{ borderBottom: `1px solid ${DECISIO_NEUTRALS.structural}` }}>
-              <td style={{ padding: "12px 16px", fontWeight: 600 }}>Rôle décisionnel</td>
-              <td style={{ padding: "12px 16px" }}>
+              <td style={{ padding: "16px 20px", fontWeight: 600 }}>Rôle décisionnel</td>
+              <td style={{ padding: "16px 20px", lineHeight: 1.4 }}>
                 Validation commerciale : <em>« Le lot est-il livrable au client ? »</em>
               </td>
-              <td style={{ padding: "12px 16px" }}>
+              <td style={{ padding: "16px 20px", lineHeight: 1.4 }}>
                 Pilotage machine : <em>« Une cause spéciale perturbe-t-elle le système ? »</em>
               </td>
             </tr>
 
             <tr style={{ borderBottom: `2px solid ${DECISIO_NEUTRALS.textMain}` }}>
-              <td style={{ padding: "12px 16px", fontWeight: 600 }}>Action en cas d'écart</td>
-              <td style={{ padding: "12px 16px", color: alertPair.C }}>
+              <td style={{ padding: "16px 20px", fontWeight: 600 }}>Action en cas d'écart</td>
+              <td style={{ padding: "16px 20px", color: alertPair.C, lineHeight: 1.4 }}>
                 Isoler les rebuts et bloquer l'expédition (action de tri aval).
               </td>
-              <td style={{ padding: "12px 16px", color: pair.C }}>
+              <td style={{ padding: "16px 20px", color: pair.C, lineHeight: 1.4 }}>
                 Arrêter immédiatement et neutraliser la cause spéciale (action amont).
               </td>
             </tr>
@@ -120,21 +120,21 @@ export const Cap02Scene6_Gouvernance: React.FC = () => {
         <div
           style={{
             backgroundColor: DECISIO_NEUTRALS.codeBg,
-            borderLeft: `5px solid ${pair.C}`,
-            padding: "16px 20px",
+            borderLeft: `6px solid ${pair.C}`,
+            padding: "20px 28px",
             borderRadius: 6,
             display: "flex",
             flexDirection: "column",
-            gap: 6,
+            gap: 10,
           }}
         >
           <div
             style={{
               fontFamily: DECISIO_FONTS.code,
-              fontSize: 13,
+              fontSize: 22,
               fontWeight: 600,
               color: pair.C,
-              letterSpacing: "0.1em",
+              letterSpacing: "0.08em",
               textTransform: "uppercase",
             }}
           >
@@ -143,7 +143,7 @@ export const Cap02Scene6_Gouvernance: React.FC = () => {
           <div
             style={{
               fontFamily: DECISIO_FONTS.serif,
-              fontSize: 18,
+              fontSize: 28,
               color: DECISIO_NEUTRALS.textMain,
               lineHeight: 1.45,
             }}

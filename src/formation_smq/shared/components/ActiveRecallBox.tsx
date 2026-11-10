@@ -41,14 +41,14 @@ export const ActiveRecallBox: React.FC<ActiveRecallBoxProps> = ({
         transform: `scale(${scale})`,
         opacity,
         backgroundColor: pair.F,
-        borderLeft: `6px solid ${pair.C}`,
-        borderRadius: 6,
-        padding: "24px 32px",
-        boxShadow: "0 8px 24px rgba(20, 32, 43, 0.08)",
+        borderLeft: `8px solid ${pair.C}`,
+        borderRadius: 8,
+        padding: "36px 44px",
+        boxShadow: "0 12px 32px rgba(20, 32, 43, 0.10)",
         display: "flex",
         flexDirection: "column",
-        gap: 12,
-        maxWidth: 1200,
+        gap: 20,
+        maxWidth: 1440,
         margin: "0 auto",
       }}
     >
@@ -56,21 +56,21 @@ export const ActiveRecallBox: React.FC<ActiveRecallBoxProps> = ({
         style={{
           display: "flex",
           alignItems: "center",
-          gap: 12,
+          gap: 16,
         }}
       >
         <span
           style={{
             fontFamily: DECISIO_FONTS.code,
-            fontSize: 13,
+            fontSize: 22,
             fontWeight: 600,
-            letterSpacing: "0.14em",
+            letterSpacing: "0.10em",
             textTransform: "uppercase",
             color: pair.C,
             backgroundColor: DECISIO_NEUTRALS.white,
-            padding: "4px 10px",
-            borderRadius: 4,
-            border: `1px solid ${pair.C}`,
+            padding: "6px 14px",
+            borderRadius: 6,
+            border: `1.5px solid ${pair.C}`,
           }}
         >
           Rappel Actif
@@ -80,7 +80,7 @@ export const ActiveRecallBox: React.FC<ActiveRecallBoxProps> = ({
             style={{
               fontFamily: DECISIO_FONTS.serif,
               fontStyle: "italic",
-              fontSize: 15,
+              fontSize: 26,
               color: DECISIO_NEUTRALS.textSecondary,
             }}
           >
@@ -92,10 +92,10 @@ export const ActiveRecallBox: React.FC<ActiveRecallBoxProps> = ({
       <div
         style={{
           fontFamily: DECISIO_FONTS.serif,
-          fontSize: 28,
+          fontSize: 42,
           fontWeight: 600,
           color: DECISIO_NEUTRALS.textMain,
-          lineHeight: 1.35,
+          lineHeight: 1.4,
         }}
       >
         « {question} »

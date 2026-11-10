@@ -44,8 +44,8 @@ export const DecisioHeader: React.FC<DecisioHeaderProps> = ({
           justifyContent: "space-between",
           alignItems: "center",
           fontFamily: DECISIO_FONTS.serif,
-          fontSize: 16,
-          letterSpacing: "0.14em",
+          fontSize: 20,
+          letterSpacing: "0.10em",
           textTransform: "uppercase",
           color: DECISIO_NEUTRALS.textSecondary,
         }}
@@ -55,13 +55,13 @@ export const DecisioHeader: React.FC<DecisioHeaderProps> = ({
           <span
             style={{
               fontFamily: DECISIO_FONTS.code,
-              fontSize: 14,
+              fontSize: 20,
               backgroundColor: pair.F,
               color: pair.C,
-              padding: "4px 10px",
+              padding: "6px 14px",
               borderRadius: 4,
               fontWeight: 600,
-              letterSpacing: "0.05em",
+              letterSpacing: "0.06em",
             }}
           >
             {normativeRef}
@@ -81,10 +81,10 @@ export const DecisioHeader: React.FC<DecisioHeaderProps> = ({
           <span
             style={{
               fontFamily: DECISIO_FONTS.serif,
-              fontSize: 20,
+              fontSize: 28,
               fontWeight: 600,
               color: pair.C,
-              letterSpacing: "0.04em",
+              letterSpacing: "0.03em",
             }}
           >
             {moduleTitle}
@@ -92,7 +92,7 @@ export const DecisioHeader: React.FC<DecisioHeaderProps> = ({
           <span
             style={{
               color: DECISIO_NEUTRALS.axesLines,
-              fontSize: 20,
+              fontSize: 28,
             }}
           >
             —
@@ -100,7 +100,7 @@ export const DecisioHeader: React.FC<DecisioHeaderProps> = ({
           <span
             style={{
               fontFamily: DECISIO_FONTS.serif,
-              fontSize: 24,
+              fontSize: 32,
               fontWeight: 600,
               color: DECISIO_NEUTRALS.textMain,
             }}

@@ -12,15 +12,15 @@ export const SCENE_DURATIONS_SEC = {
   s5_regle_decision: 30,     // 900 frames : Grille de décision opérationnelle
 };
 
-// Durées des scènes pour la Capsule 1.2 : Tolérances client (USL/LSL) vs Limites naturelles (UCL/LCL)
-// Cible exacte : 4 minutes 00 secondes = 240 s = 7200 frames
+// Durées des scènes pour la Capsule 1.2 : Tolérances client (USL/LSL) et Limites naturelles (UCL/LCL)
+// Synchronisées avec la voix off HenriNeural (durée totale ~4 min 44 s = 8 520 frames)
 export const SCENE_DURATIONS_CAP02_SEC = {
-  s1_quiproquo: 30,             // 900 frames : Le quiproquo industriel Spécification vs Variation
-  s2_anatomie_graphique: 48,    // 1440 frames : Voix du Client (USL/LSL) vs Voix du Procédé (UCL/LCL)
-  s3_formalisation_iso: 45,     // 1350 frames : Formalisation ISO 22514-1 & équations mathématiques
-  s4_matrice_quadrants: 48,     // 1440 frames : Matrice 2x2 Capabilité vs Stabilité statistique
-  s5_rappel_actif: 25,          // 750 frames : Rappel actif : Pièce conforme = procédé sous contrôle ?
-  s6_gouvernance: 40,           // 1200 frames : Matrice de gouvernance et règles opératoires
+  s1_quiproquo: 28,             // 840 frames : audio 24.55s + 3.45s respiration
+  s2_anatomie_graphique: 54,    // 1620 frames : audio 50.59s + 3.41s respiration
+  s3_formalisation_iso: 55,     // 1650 frames : audio 51.96s + 3.04s respiration
+  s4_matrice_quadrants: 68,     // 2040 frames : audio 65.02s + 2.98s respiration
+  s5_rappel_actif: 25,          // 750 frames : audio 20.11s + 4.89s réflexion active
+  s6_gouvernance: 50,           // 1500 frames : audio 46.08s + 3.92s conclusion
 };
 
 export const TRANSITION_FRAMES = 15; // 0.5s transition douce
@@ -68,12 +68,12 @@ export const getMod01Capsule02Timings = () => {
   const scenes = [
     {
       id: "cap02_s1",
-      title: "Le quiproquo industriel : Spécifications vs Variation",
+      title: "Le quiproquo industriel : Spécification et Variabilité",
       frames: SCENE_DURATIONS_CAP02_SEC.s1_quiproquo * FPS,
     },
     {
       id: "cap02_s2",
-      title: "Anatomie graphique : Voix du Client vs Voix du Procédé",
+      title: "Anatomie graphique : Voix du Client et Voix du Procédé",
       frames: SCENE_DURATIONS_CAP02_SEC.s2_anatomie_graphique * FPS,
     },
     {
@@ -83,7 +83,7 @@ export const getMod01Capsule02Timings = () => {
     },
     {
       id: "cap02_s4",
-      title: "La Matrice Stabilité vs Capabilité : Les 4 Quadrants",
+      title: "La Matrice Stabilité et Capabilité : Les 4 Quadrants",
       frames: SCENE_DURATIONS_CAP02_SEC.s4_matrice_quadrants * FPS,
     },
     {

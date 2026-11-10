@@ -24,7 +24,7 @@ export const Cap02Scene1_Probleme: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: DECISIO_NEUTRALS.white }}>
       <DecisioHeader
         moduleTitle="Module 01 • Fondations de la Variabilité"
-        capsuleTitle="Spécifications Client vs Limites Naturelles"
+        capsuleTitle="Spécifications Client et Limites Naturelles"
         normativeRef="ISO 22514-1 / §4.2"
       />
 
@@ -36,7 +36,7 @@ export const Cap02Scene1_Probleme: React.FC = () => {
           right: 120,
           display: "flex",
           flexDirection: "column",
-          gap: 28,
+          gap: 36,
           opacity: titleOpacity,
           transform: `translateY(${textTranslateY}px)`,
         }}
@@ -44,10 +44,10 @@ export const Cap02Scene1_Probleme: React.FC = () => {
         <div
           style={{
             fontFamily: DECISIO_FONTS.serif,
-            fontSize: 46,
+            fontSize: 68,
             fontWeight: 600,
             color: pair.C,
-            lineHeight: 1.2,
+            lineHeight: 1.15,
           }}
         >
           Le quiproquo le plus coûteux de l'industrie moderne
@@ -56,88 +56,92 @@ export const Cap02Scene1_Probleme: React.FC = () => {
         <div
           style={{
             fontFamily: DECISIO_FONTS.serif,
-            fontSize: 25,
+            fontSize: 38,
             color: DECISIO_NEUTRALS.textMain,
-            lineHeight: 1.6,
-            maxWidth: 1420,
+            lineHeight: 1.55,
+            maxWidth: 1540,
           }}
         >
-          Dans une usine sur deux, les équipes d'atelier superposent sur leurs écrans
-          les <strong>tolérances contractuelles du plan client</strong> et les
-          <strong> limites de dispersion de la machine</strong>, comme si ces grandeurs
+          Dans une usine sur deux, les équipes superposent sur leurs écrans
+          les <strong>tolérances contractuelles du plan client</strong> et les{" "}
+          <strong>limites de dispersion de la machine</strong>, comme si ces grandeurs
           mesuraient le même phénomène.
         </div>
 
-        {/* Bloc comparatif de choc */}
+        {/* Bloc comparatif */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gap: 28,
-            marginTop: 10,
+            gap: 32,
+            marginTop: 8,
           }}
         >
           <div
             style={{
               backgroundColor: alertPair.F,
-              borderLeft: `5px solid ${alertPair.C}`,
-              padding: "20px 24px",
-              borderRadius: 6,
+              borderLeft: `6px solid ${alertPair.C}`,
+              padding: "28px 32px",
+              borderRadius: 8,
             }}
           >
             <div
               style={{
                 fontFamily: DECISIO_FONTS.code,
-                fontSize: 14,
+                fontSize: 22,
                 color: alertPair.C,
                 fontWeight: 600,
-                letterSpacing: "0.08em",
-                marginBottom: 8,
+                letterSpacing: "0.06em",
+                marginBottom: 14,
               }}
             >
-              VOIX DU CLIENT (LSL / USL)
+              VOIX DU CLIENT — LSL / USL
             </div>
             <div
               style={{
                 fontFamily: DECISIO_FONTS.serif,
-                fontSize: 20,
+                fontSize: 32,
                 color: DECISIO_NEUTRALS.textMain,
-                lineHeight: 1.5,
+                lineHeight: 1.45,
               }}
             >
-              Exprime <strong>ce que le client désire</strong> (le cahier des charges fonctionnel). Elle est fixée par contrat, totalement indifférente aux contraintes physiques de l'atelier.
+              Ce que le client{" "}
+              <strong>désire</strong>. Fixé par contrat. Indifférent
+              aux contraintes physiques de l'atelier.
             </div>
           </div>
 
           <div
             style={{
               backgroundColor: pair.F,
-              borderLeft: `5px solid ${pair.C}`,
-              padding: "20px 24px",
-              borderRadius: 6,
+              borderLeft: `6px solid ${pair.C}`,
+              padding: "28px 32px",
+              borderRadius: 8,
             }}
           >
             <div
               style={{
                 fontFamily: DECISIO_FONTS.code,
-                fontSize: 14,
+                fontSize: 22,
                 color: pair.C,
                 fontWeight: 600,
-                letterSpacing: "0.08em",
-                marginBottom: 8,
+                letterSpacing: "0.06em",
+                marginBottom: 14,
               }}
             >
-              VOIX DU PROCÉDÉ (LNTL / UNTL / LCL / UCL)
+              VOIX DU PROCÉDÉ — LCL / UCL
             </div>
             <div
               style={{
                 fontFamily: DECISIO_FONTS.serif,
-                fontSize: 20,
+                fontSize: 32,
                 color: DECISIO_NEUTRALS.textMain,
-                lineHeight: 1.5,
+                lineHeight: 1.45,
               }}
             >
-              Exprime <strong>ce que la machine est réellement capable de faire</strong> sous causes communes. Elle est régie par la physique et les lois de probabilités.
+              Ce que la machine{" "}
+              <strong>peut réellement faire</strong>. Régi par la physique
+              et les lois de probabilités.
             </div>
           </div>
         </div>
@@ -146,20 +150,21 @@ export const Cap02Scene1_Probleme: React.FC = () => {
           style={{
             backgroundColor: DECISIO_NEUTRALS.codeBg,
             borderLeft: `4px solid ${DECISIO_NEUTRALS.axesLines}`,
-            padding: "16px 20px",
+            padding: "20px 28px",
             borderRadius: 4,
-            maxWidth: 1200,
           }}
         >
           <div
             style={{
               fontFamily: DECISIO_FONTS.serif,
-              fontSize: 19,
+              fontSize: 30,
               fontStyle: "italic",
               color: DECISIO_NEUTRALS.textMain,
+              lineHeight: 1.4,
             }}
           >
-            « Confondre tolérance client et limite statistique, c'est confondre le souhait d'arriver à l'heure et la vitesse réelle du train. »
+            « Confondre tolérance client et limite statistique, c'est confondre
+            le souhait d'arriver à l'heure et la vitesse réelle du train. »
           </div>
         </div>
       </div>

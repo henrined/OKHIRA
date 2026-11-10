@@ -53,7 +53,7 @@ export const Scene2_DemingEntonnoir: React.FC = () => {
             color: pair.C,
           }}
         >
-          L'expérience canonique : Laisser faire vs Réajuster sans cesse
+          L'expérience canonique : Laisser faire face au réajustement systématique
         </div>
 
         <div

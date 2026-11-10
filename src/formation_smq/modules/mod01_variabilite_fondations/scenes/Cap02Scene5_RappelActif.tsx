@@ -19,7 +19,7 @@ export const Cap02Scene5_RappelActif: React.FC = () => {
         normativeRef="PENSÉE CRITIQUE"
       />
 
-      <div style={{ width: "85%", maxWidth: 1300 }}>
+      <div style={{ width: "90%", maxWidth: 1500 }}>
         <ActiveRecallBox
           question="Si un atelier mesure 50 pièces consécutives toutes situées entre LSL et USL, a-t-on la certitude que le procédé est sous contrôle statistique ?"
           contextHint="Distinguez rigoureusement la conformité instantanée du produit et la prévisibilité future du procédé."

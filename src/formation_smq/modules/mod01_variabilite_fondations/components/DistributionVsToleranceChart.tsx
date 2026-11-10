@@ -21,24 +21,24 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
   const enter = spring({ frame, fps, config: { damping: 15 } });
 
   // Paramètres du repère SVG
-  const width = 1100;
-  const height = 440;
-  const originY = 360;
-  const centerX = width / 2; // mu = 550
+  const width = 1140;
+  const height = 450;
+  const originY = 350;
+  const centerX = width / 2; // mu = 570
 
-  // Échelle graphique : 1 sigma = 70px
-  const sigmaIndiv = 70;
-  const sigmaBar = sigmaIndiv / Math.sqrt(4); // n = 4, sigma / 2 = 35px
+  // Échelle graphique : 1 sigma = 72px
+  const sigmaIndiv = 72;
+  const sigmaBar = sigmaIndiv / Math.sqrt(4); // n = 4, sigma / 2 = 36px
 
-  // Tolérances client (IT = USL - LSL = 6.8 * sigma = 476px)
-  const lslX = centerX - 238; // -3.4 sigma
-  const uslX = centerX + 238; // +3.4 sigma
+  // Tolérances client (IT = USL - LSL = 6.8 * sigma = 489px)
+  const lslX = centerX - 245;
+  const uslX = centerX + 245;
 
-  // Limites naturelles individuelles (3 sigma = 210px)
+  // Limites naturelles individuelles (3 sigma = 216px)
   const lntlX = centerX - 3 * sigmaIndiv;
   const untlX = centerX + 3 * sigmaIndiv;
 
-  // Limites de contrôle sur moyennes (3 sigma / sqrt(n) = 105px)
+  // Limites de contrôle sur moyennes (3 sigma / sqrt(n) = 108px)
   const lclX = centerX - 3 * sigmaBar;
   const uclX = centerX + 3 * sigmaBar;
 
@@ -50,16 +50,16 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
   for (let i = 0; i <= steps; i++) {
     const x = 50 + (i / steps) * (width - 100);
     const zIndiv = (x - centerX) / sigmaIndiv;
-    const yIndiv = originY - 260 * Math.exp(-0.5 * zIndiv * zIndiv);
+    const yIndiv = originY - 250 * Math.exp(-0.5 * zIndiv * zIndiv);
     pointsIndiv.push(`${x},${yIndiv}`);
 
     const zMean = (x - centerX) / sigmaBar;
-    const yMean = originY - 330 * Math.exp(-0.5 * zMean * zMean);
+    const yMean = originY - 320 * Math.exp(-0.5 * zMean * zMean);
     pointsMean.push(`${x},${yMean}`);
   }
 
   const dIndiv = `M 50,${originY} L ` + pointsIndiv.join(" L ") + ` L ${width - 50},${originY}`;
-  const dMean = `M ${centerX - 160},${originY} L ` + pointsMean.join(" L ") + ` L ${centerX + 160},${originY}`;
+  const dMean = `M ${centerX - 170},${originY} L ` + pointsMean.join(" L ") + ` L ${centerX + 170},${originY}`;
 
   // Animation de découverte
   const curveGrow = interpolate(frame, [10, 45], [0, 1], {
@@ -85,23 +85,23 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
         position: "relative",
         opacity: enter,
         backgroundColor: DECISIO_NEUTRALS.codeBg,
-        border: `1px solid ${DECISIO_NEUTRALS.structural}`,
-        borderRadius: 8,
+        border: `1.5px solid ${DECISIO_NEUTRALS.structural}`,
+        borderRadius: 10,
         padding: "16px 20px",
-        boxShadow: "0 4px 20px rgba(20, 32, 43, 0.05)",
+        boxShadow: "0 6px 24px rgba(20, 32, 43, 0.06)",
       }}
     >
       <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
         <defs>
           {/* Dégradé sous la courbe normale unitaire */}
           <linearGradient id="curveFill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#0F6108" stopOpacity="0.18" />
-            <stop offset="100%" stopColor="#0F6108" stopOpacity="0.01" />
+            <stop offset="0%" stopColor="#0F6108" stopOpacity="0.20" />
+            <stop offset="100%" stopColor="#0F6108" stopOpacity="0.02" />
           </linearGradient>
 
           {/* Dégradé sous la courbe des moyennes */}
           <linearGradient id="meanFill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#0E6CAF" stopOpacity="0.22" />
+            <stop offset="0%" stopColor="#0E6CAF" stopOpacity="0.25" />
             <stop offset="100%" stopColor="#0E6CAF" stopOpacity="0.02" />
           </linearGradient>
         </defs>
@@ -113,25 +113,25 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
           x2={width - 40}
           y2={originY}
           stroke={DECISIO_NEUTRALS.axesLines}
-          strokeWidth={1.5}
+          strokeWidth={2}
         />
 
         {/* Ligne médiane (Moyenne mu) */}
         <line
           x1={centerX}
-          y1={60}
+          y1={50}
           x2={centerX}
           y2={originY}
           stroke={DECISIO_NEUTRALS.textSecondary}
-          strokeWidth={1.5}
-          strokeDasharray="4 4"
+          strokeWidth={2}
+          strokeDasharray="5 5"
         />
         <text
           x={centerX}
-          y={originY + 28}
+          y={originY + 34}
           textAnchor="middle"
           fontFamily={DECISIO_FONTS.serif}
-          fontSize={16}
+          fontSize={24}
           fontWeight={600}
           fill={DECISIO_NEUTRALS.textMain}
         >
@@ -145,31 +145,33 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
             d={`M 50,${originY} L ` + pointsIndiv.join(" L ")}
             fill="none"
             stroke="#14202B"
-            strokeWidth={2.5}
+            strokeWidth={3}
           />
         </g>
 
         {/* Limites Naturelles 6-sigma du Procédé (UNTL / LNTL) */}
-        <g stroke={DECISIO_NEUTRALS.textSecondary} strokeWidth={1.5} strokeDasharray="3 3">
-          <line x1={lntlX} y1={100} x2={lntlX} y2={originY} />
-          <line x1={untlX} y1={100} x2={untlX} y2={originY} />
+        <g stroke={DECISIO_NEUTRALS.textSecondary} strokeWidth={2} strokeDasharray="4 4">
+          <line x1={lntlX} y1={90} x2={lntlX} y2={originY} />
+          <line x1={untlX} y1={90} x2={untlX} y2={originY} />
         </g>
         <text
           x={lntlX}
-          y={originY + 24}
+          y={originY + 30}
           textAnchor="middle"
           fontFamily={DECISIO_FONTS.code}
-          fontSize={13}
+          fontSize={20}
+          fontWeight={600}
           fill={DECISIO_NEUTRALS.textSecondary}
         >
-          LNTL (μ - 3σ)
+          LNTL (μ − 3σ)
         </text>
         <text
           x={untlX}
-          y={originY + 24}
+          y={originY + 30}
           textAnchor="middle"
           fontFamily={DECISIO_FONTS.code}
-          fontSize={13}
+          fontSize={20}
+          fontWeight={600}
           fill={DECISIO_NEUTRALS.textSecondary}
         >
           UNTL (μ + 3σ)
@@ -179,29 +181,30 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
         <g>
           <line
             x1={lntlX}
-            y1={120}
+            y1={115}
             x2={untlX}
-            y2={120}
+            y2={115}
             stroke={DECISIO_NEUTRALS.textSecondary}
-            strokeWidth={1.5}
+            strokeWidth={2}
           />
-          <circle cx={lntlX} cy={120} r={3} fill={DECISIO_NEUTRALS.textSecondary} />
-          <circle cx={untlX} cy={120} r={3} fill={DECISIO_NEUTRALS.textSecondary} />
+          <circle cx={lntlX} cy={115} r={4} fill={DECISIO_NEUTRALS.textSecondary} />
+          <circle cx={untlX} cy={115} r={4} fill={DECISIO_NEUTRALS.textSecondary} />
           <rect
-            x={centerX - 130}
-            y={106}
-            width={260}
-            height={26}
+            x={centerX - 170}
+            y={98}
+            width={340}
+            height={34}
             fill={DECISIO_NEUTRALS.white}
-            rx={4}
+            rx={6}
             stroke={DECISIO_NEUTRALS.structural}
+            strokeWidth={1.5}
           />
           <text
             x={centerX}
-            y={124}
+            y={122}
             textAnchor="middle"
             fontFamily={DECISIO_FONTS.serif}
-            fontSize={14}
+            fontSize={20}
             fontWeight={600}
             fill={DECISIO_NEUTRALS.textMain}
           >
@@ -213,57 +216,58 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
         <g>
           <line
             x1={lslX}
-            y1={40}
+            y1={30}
             x2={lslX}
             y2={originY}
             stroke={specColor}
-            strokeWidth={2.5}
+            strokeWidth={3}
           />
           <line
             x1={uslX}
-            y1={40}
+            y1={30}
             x2={uslX}
             y2={originY}
             stroke={specColor}
-            strokeWidth={2.5}
+            strokeWidth={3}
           />
           {/* Double flèche IT client */}
           <line
             x1={lslX}
-            y1={50}
+            y1={42}
             x2={uslX}
-            y2={50}
+            y2={42}
             stroke={specColor}
-            strokeWidth={1.8}
+            strokeWidth={2.5}
           />
-          <circle cx={lslX} cy={50} r={4} fill={specColor} />
-          <circle cx={uslX} cy={50} r={4} fill={specColor} />
+          <circle cx={lslX} cy={42} r={5} fill={specColor} />
+          <circle cx={uslX} cy={42} r={5} fill={specColor} />
           <rect
-            x={centerX - 140}
-            y={36}
-            width={280}
-            height={28}
+            x={centerX - 180}
+            y={24}
+            width={360}
+            height={36}
             fill={DECISIO_CHROMATIC_PAIRS.tomeII_desc.F}
-            rx={4}
+            rx={6}
             stroke={specColor}
+            strokeWidth={1.5}
           />
           <text
             x={centerX}
-            y={55}
+            y={49}
             textAnchor="middle"
             fontFamily={DECISIO_FONTS.code}
-            fontSize={14}
+            fontSize={20}
             fontWeight={600}
             fill={specColor}
           >
-            Voix du Client : IT = USL - LSL
+            Voix du Client : IT = USL − LSL
           </text>
           <text
             x={lslX}
-            y={originY + 48}
+            y={originY + 62}
             textAnchor="middle"
             fontFamily={DECISIO_FONTS.code}
-            fontSize={14}
+            fontSize={22}
             fontWeight={600}
             fill={specColor}
           >
@@ -271,10 +275,10 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
           </text>
           <text
             x={uslX}
-            y={originY + 48}
+            y={originY + 62}
             textAnchor="middle"
             fontFamily={DECISIO_FONTS.code}
-            fontSize={14}
+            fontSize={22}
             fontWeight={600}
             fill={specColor}
           >
@@ -287,64 +291,66 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
           <g style={{ opacity: curveGrow }}>
             <path d={dMean} fill="url(#meanFill)" />
             <path
-              d={`M ${centerX - 160},${originY} L ` + pointsMean.join(" L ")}
+              d={`M ${centerX - 170},${originY} L ` + pointsMean.join(" L ")}
               fill="none"
               stroke="#0E6CAF"
-              strokeWidth={2}
-              strokeDasharray="6 3"
+              strokeWidth={2.5}
+              strokeDasharray="7 4"
             />
             {/* Lignes de contrôle UCL / LCL */}
             <line
               x1={lclX}
-              y1={170}
+              y1={160}
               x2={lclX}
               y2={originY}
               stroke={spcColor}
-              strokeWidth={2}
+              strokeWidth={2.5}
             />
             <line
               x1={uclX}
-              y1={170}
+              y1={160}
               x2={uclX}
               y2={originY}
               stroke={spcColor}
-              strokeWidth={2}
+              strokeWidth={2.5}
             />
             <rect
-              x={lclX - 45}
-              y={180}
-              width={90}
-              height={22}
+              x={lclX - 58}
+              y={172}
+              width={116}
+              height={30}
               fill={DECISIO_CHROMATIC_PAIRS.tomeX_spc.F}
-              rx={3}
+              rx={4}
               stroke={spcColor}
+              strokeWidth={1.5}
             />
             <text
               x={lclX}
-              y={196}
+              y={194}
               textAnchor="middle"
               fontFamily={DECISIO_FONTS.code}
-              fontSize={12}
+              fontSize={18}
               fontWeight={600}
               fill={spcColor}
             >
               LCL (X̄)
             </text>
             <rect
-              x={uclX - 45}
-              y={180}
-              width={90}
-              height={22}
+              x={uclX - 58}
+              y={172}
+              width={116}
+              height={30}
               fill={DECISIO_CHROMATIC_PAIRS.tomeX_spc.F}
-              rx={3}
+              rx={4}
               stroke={spcColor}
+              strokeWidth={1.5}
             />
             <text
               x={uclX}
-              y={196}
+              y={194}
               textAnchor="middle"
               fontFamily={DECISIO_FONTS.code}
-              fontSize={12}
+              fontSize={18}
               fontWeight={600}
               fill={spcColor}
             >
@@ -357,21 +363,21 @@ export const DistributionVsToleranceChart: React.FC<DistributionVsToleranceChart
         {highlightHeresy && (
           <g style={{ opacity: heresyOpacity }}>
             <rect
-              x={centerX - 360}
-              y={240}
-              width={720}
-              height={50}
-              rx={6}
-              fill="#FFF2F2"
+              x={centerX - 460}
+              y={235}
+              width={920}
+              height={60}
+              rx={8}
+              fill="#FFF0F0"
               stroke={specColor}
-              strokeWidth={2}
+              strokeWidth={2.5}
             />
             <text
               x={centerX}
-              y={272}
+              y={273}
               textAnchor="middle"
               fontFamily={DECISIO_FONTS.serif}
-              fontSize={18}
+              fontSize={24}
               fontWeight={600}
               fill={specColor}
             >

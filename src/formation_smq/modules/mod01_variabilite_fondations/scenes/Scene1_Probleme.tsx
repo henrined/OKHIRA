@@ -23,7 +23,7 @@ export const Scene1_Probleme: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: DECISIO_NEUTRALS.white }}>
       <DecisioHeader
         moduleTitle="Module 01 • Fondations de la Variabilité"
-        capsuleTitle="Causes Communes vs Causes Spéciales"
+        capsuleTitle="Causes Communes et Causes Spéciales"
         normativeRef="ISO 3534-2 / §2.1"
       />
 

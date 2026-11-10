@@ -114,7 +114,7 @@ export const Scene5_RegleDecision: React.FC = () => {
             justifyContent: "space-between",
           }}
         >
-          <span>PROCHAINE CAPSULE : 1.2 — TOLÉRANCES CLIENTS (USL/LSL) VS LIMITES DE PROCÉDÉ (UCL/LCL)</span>
+          <span>PROCHAINE CAPSULE : 1.2 — TOLÉRANCES CLIENTS (USL/LSL) ET LIMITES NATURELLES DE PROCÉDÉ (UCL/LCL)</span>
           <span style={{ fontWeight: 600, color: pair.C }}>ÉDITIONS DÉCISIO • TOUS DROITS RÉSERVÉS</span>
         </div>
       </div>
