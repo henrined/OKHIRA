@@ -83,7 +83,7 @@ export const Scene8: React.FC<Scene8Props> = ({
         }}
       >
         <Img
-          src={staticFile("scwb/produit/bouton_achat.png")}
+          src={staticFile(`scwb/boutons/bouton_${platform}.png`)}
           style={{ width: "100%", height: "auto", display: "block" }}
         />
       </div>
