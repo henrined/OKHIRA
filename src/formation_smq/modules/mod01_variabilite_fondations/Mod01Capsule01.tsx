@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Audio, staticFile } from "remotion";
 import { TransitionSeries, linearTiming } from "@remotion/transitions";
 import { fade } from "@remotion/transitions/fade";
 
@@ -26,6 +26,9 @@ export const Mod01Capsule01: React.FC<Mod01Capsule01Props> = () => {
     return sc.frames + (isLast ? PAUSE_FRAMES : PAUSE_FRAMES + TRANSITION_FRAMES);
   });
 
+  const voicePath = (file: string) =>
+    staticFile(`formation_smq/modules/mod01_variabilite_fondations/voix/${file}`);
+
   return (
     <AbsoluteFill style={{ backgroundColor: DECISIO_NEUTRALS.white }}>
       <TransitionSeries>
@@ -34,6 +37,7 @@ export const Mod01Capsule01: React.FC<Mod01Capsule01Props> = () => {
           name="S1 - Probleme"
           durationInFrames={sequenceDurations[0]}
         >
+          <Audio src={voicePath("cap01_s1.mp3")} />
           <Scene1_Probleme />
         </TransitionSeries.Sequence>
 
@@ -47,6 +51,7 @@ export const Mod01Capsule01: React.FC<Mod01Capsule01Props> = () => {
           name="S2 - Deming Entonnoir"
           durationInFrames={sequenceDurations[1]}
         >
+          <Audio src={voicePath("cap01_s2.mp3")} />
           <Scene2_DemingEntonnoir />
         </TransitionSeries.Sequence>
 
@@ -60,6 +65,7 @@ export const Mod01Capsule01: React.FC<Mod01Capsule01Props> = () => {
           name="S3 - Formalisation"
           durationInFrames={sequenceDurations[2]}
         >
+          <Audio src={voicePath("cap01_s3.mp3")} />
           <Scene3_FormuleVariabilite />
         </TransitionSeries.Sequence>
 
@@ -73,6 +79,7 @@ export const Mod01Capsule01: React.FC<Mod01Capsule01Props> = () => {
           name="S4 - Rappel Actif"
           durationInFrames={sequenceDurations[3]}
         >
+          <Audio src={voicePath("cap01_s4.mp3")} />
           <Scene4_RappelActif />
         </TransitionSeries.Sequence>
 
@@ -86,6 +93,7 @@ export const Mod01Capsule01: React.FC<Mod01Capsule01Props> = () => {
           name="S5 - Regle de Decision"
           durationInFrames={sequenceDurations[4]}
         >
+          <Audio src={voicePath("cap01_s5.mp3")} />
           <Scene5_RegleDecision />
         </TransitionSeries.Sequence>
       </TransitionSeries>
