@@ -1,0 +1,1 @@
+Arrêtons-nous une seconde. Un atelier mesure cinquante pièces consécutives. Toutes se situent entre L-S-L et U-S-L. Toutes conformes. A-t-on la certitude que le procédé est sous contrôle statistique ? Prenez le temps d'y répondre. La réponse est non. Et la raison est mathématiquement précise. Nous l'examinons dans la scène suivante.

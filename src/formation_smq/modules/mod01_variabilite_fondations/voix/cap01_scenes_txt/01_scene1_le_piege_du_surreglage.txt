@@ -1,0 +1,1 @@
+Chaque jour sur les lignes de production, des opérateurs consciencieux réajustent une machine dès qu'une pièce s'écarte de la cible. Le résultat paradoxal ? La dispersion globale explose et le taux de rebut augmente. Comme l'a démontré Edwards Deming : confondre une cause commune avec une cause spéciale est l'erreur la plus coûteuse de l'industrie.
