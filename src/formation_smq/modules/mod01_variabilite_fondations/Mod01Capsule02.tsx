@@ -4,7 +4,7 @@ import { TransitionSeries, linearTiming } from "@remotion/transitions";
 import { fade } from "@remotion/transitions/fade";
 
 import { Cap02Scene1_Probleme } from "./scenes/Cap02Scene1_Probleme";
-import { Cap02Scene2_AnatomieGraphique } from "./scenes/Cap02Scene2_AnatomieGraphique";
+import { ToleranceChartScene } from "./scenes/ToleranceChartScene";
 import { Cap02Scene3_FormalisationISO } from "./scenes/Cap02Scene3_FormalisationISO";
 import { Cap02Scene4_MatriceQuadrants } from "./scenes/Cap02Scene4_MatriceQuadrants";
 import { Cap02Scene5_RappelActif } from "./scenes/Cap02Scene5_RappelActif";
@@ -53,7 +53,7 @@ export const Mod01Capsule02: React.FC<Mod01Capsule02Props> = () => {
           durationInFrames={sequenceDurations[1]}
         >
           <Audio src={voicePath("cap02_s2.mp3")} />
-          <Cap02Scene2_AnatomieGraphique />
+          <ToleranceChartScene />
         </TransitionSeries.Sequence>
 
         <TransitionSeries.Transition

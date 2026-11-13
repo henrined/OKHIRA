@@ -28,21 +28,21 @@ Et cette confusion coûte des millions d'euros par an à l'industrie manufacturi
 
 Regardons ce graphique.
 […]
+Les TRAITS BORDEAUX représentent les spécifications contractuelles : LSL et USL —
+Limite Inférieure et Limite Supérieure de Spécification.
+Elles sont fixées par le bureau d'études du client, indépendamment de toute réalité physique de la machine.
+[…]
 La COURBE NOIRE représente la distribution des pièces individuelles
 produites par la machine sous causes communes uniquement.
 Sa largeur naturelle est de SIX SIGMA — c'est ce que l'on appelle
 les limites naturelles du procédé, notées LNTL et UNTL.
 […]
-Les TRAITS ROUGES, eux, représentent les spécifications contractuelles LSL et USL —
-Limite Inférieure et Limite Supérieure de Spécification.
-Elles sont fixées par le bureau d'études du client, indépendamment de toute réalité physique de la machine.
-[…]
 La COURBE BLEUE en pointillés, plus étroite, représente non pas les pièces,
 mais les MOYENNES de sous-groupes de quatre pièces.
 C'est sur cette courbe que l'on calcule les limites de la carte de contrôle : LCL et UCL.
 […]
-Ces trois univers sont MATHÉMATIQUEMENT ÉTANCHES.
-Les mélanger est une faute professionnelle.
+Ces univers sont MATHÉMATIQUEMENT ÉTANCHES.
+Les mélanger sur une même carte est une faute méthodologique majeure.
 
 ---
 

@@ -33,13 +33,13 @@ SCENES = {
     ),
     "cap02_s2": (
         "Regardons ce graphique. "
-        "La courbe noire représente la distribution des pièces individuelles produites par la machine sous causes communes uniquement. "
-        "Sa largeur naturelle est de six sigma : ce sont les limites naturelles de procédé, notées LNTL et UNTL. "
         "Les traits bordeaux représentent les spécifications contractuelles : LSL et USL, la limite inférieure et la limite supérieure de spécification. "
         "Elles sont fixées par le bureau d'études du client, indépendamment de toute réalité physique de la machine. "
+        "La courbe noire représente la distribution des pièces individuelles produites par la machine sous causes communes uniquement. "
+        "Sa largeur naturelle est de six sigma : ce sont les limites naturelles du procédé, notées LNTL et UNTL. "
         "La courbe bleue en pointillés, plus étroite, représente non pas les pièces, mais les moyennes de sous-groupes de quatre pièces. "
         "C'est sur cette distribution que l'on calcule les limites de la carte de contrôle Shewhart : LCL et UCL. "
-        "Ces univers sont mathématiquement étanches. Les mélanger est une faute méthodologique majeure."
+        "Ces univers sont mathématiquement étanches. Les mélanger sur une même carte est une faute méthodologique majeure."
     ),
     "cap02_s3": (
         "La norme internationale ISO 22514-1 formalise rigoureusement cette séparation. "
