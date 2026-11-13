@@ -168,7 +168,7 @@ export const ChartSvg: React.FC<{ p: ChartProgress }> = ({ p }) => {
           x={MU}
           y={SPEC_TOP - 22}
           textAnchor="middle"
-          fontSize="32"
+          fontSize="36"
           fontWeight="600"
           fill={C.client}
           opacity={fade(0.55, 0.95, p.client)}
@@ -177,16 +177,16 @@ export const ChartSvg: React.FC<{ p: ChartProgress }> = ({ p }) => {
         </text>
         {/* LSL / USL à l'extérieur des lignes : jamais sur une courbe */}
         <g opacity={fade(0.6, 1, p.client)} fill={C.client}>
-          <text x={specX1 - 16} y={BASE - 64} textAnchor="end" fontSize="34" fontWeight="700">
+          <text x={specX1 - 18} y={BASE - 64} textAnchor="end" fontSize="38" fontWeight="700">
             LSL
           </text>
-          <text x={specX1 - 16} y={BASE - 30} textAnchor="end" fontSize="26">
+          <text x={specX1 - 18} y={BASE - 28} textAnchor="end" fontSize="28">
             (client)
           </text>
-          <text x={specX2 + 16} y={BASE - 64} textAnchor="start" fontSize="34" fontWeight="700">
+          <text x={specX2 + 18} y={BASE - 64} textAnchor="start" fontSize="38" fontWeight="700">
             USL
           </text>
-          <text x={specX2 + 16} y={BASE - 30} textAnchor="start" fontSize="26">
+          <text x={specX2 + 18} y={BASE - 28} textAnchor="start" fontSize="28">
             (client)
           </text>
         </g>
@@ -212,7 +212,7 @@ export const ChartSvg: React.FC<{ p: ChartProgress }> = ({ p }) => {
           <line x1={MU - NAT * p.process} x2={MU + NAT * p.process} y1={BASE + 126} y2={BASE + 126} stroke={C.natural} strokeWidth="4" />
           <line x1={MU - NAT} x2={MU - NAT} y1={BASE + 114} y2={BASE + 138} stroke={C.natural} strokeWidth="4" />
           <line x1={MU + NAT} x2={MU + NAT} y1={BASE + 114} y2={BASE + 138} stroke={C.natural} strokeWidth="4" />
-          <text x={MU} y={BASE + 180} textAnchor="middle" fontSize="32" fontWeight="600" fill={C.natural}>
+          <text x={MU} y={BASE + 180} textAnchor="middle" fontSize="36" fontWeight="600" fill={C.natural}>
             Voix du procédé : 6σ, soit 99,73 % du flux
           </text>
         </g>
@@ -246,10 +246,10 @@ const TickLabel: React.FC<{ x: number; name: string; formula: string; color: str
 }) => (
   <g>
     <line x1={x} x2={x} y1={BASE} y2={BASE + 14} stroke={color} strokeWidth="3" />
-    <text x={x} y={BASE + 50} textAnchor="middle" fontSize="32" fontWeight="700" fill={color}>
+    <text x={x} y={BASE + 52} textAnchor="middle" fontSize="36" fontWeight="700" fill={color}>
       {name}
     </text>
-    <text x={x} y={BASE + 84} textAnchor="middle" fontSize="26" fontStyle="italic" fill={color}>
+    <text x={x} y={BASE + 88} textAnchor="middle" fontSize="28" fontStyle="italic" fill={color}>
       {formula}
     </text>
   </g>
@@ -339,7 +339,7 @@ export const ToleranceChartScene: React.FC<{ beats?: Beats }> = ({ beats = defau
   return (
     <AbsoluteFill style={{ background: C.paper, fontFamily: SERIF, color: C.ink }}>
       {/* En-tête réduit à une ligne */}
-      <div style={{ position: "absolute", left: 80, right: 80, top: 38, display: "flex", justifyContent: "space-between", fontSize: 26, color: C.muted, opacity: intro }}>
+      <div style={{ position: "absolute", left: 80, right: 80, top: 38, display: "flex", justifyContent: "space-between", fontSize: 28, color: C.muted, opacity: intro }}>
         <span>
           <b style={{ color: C.control, fontWeight: 600 }}>Module 01</b> – Fondations de la variabilité
         </span>
@@ -351,9 +351,9 @@ export const ToleranceChartScene: React.FC<{ beats?: Beats }> = ({ beats = defau
         style={{
           position: "absolute",
           left: 80,
-          top: 112,
+          top: 108,
           margin: 0,
-          fontSize: 64,
+          fontSize: 68,
           lineHeight: 1.1,
           fontWeight: 700,
           color: C.control,
@@ -370,7 +370,7 @@ export const ToleranceChartScene: React.FC<{ beats?: Beats }> = ({ beats = defau
       </div>
 
       {/* Clé de lecture, révélée en même temps que le graphique */}
-      <div style={{ position: "absolute", left: 1262, top: 222, width: 578, display: "flex", flexDirection: "column", gap: 22 }}>
+      <div style={{ position: "absolute", left: 1262, top: 222, width: 578, display: "flex", flexDirection: "column", gap: 18 }}>
         {rows.map((r, i) => {
           const t = interpolate(frame, [r.at * fps, r.at * fps + 18], [0, 1], { ...clamp, easing: ease });
           const active = i === activeIndex;
@@ -385,9 +385,9 @@ export const ToleranceChartScene: React.FC<{ beats?: Beats }> = ({ beats = defau
                 background: active ? "#F3F6F4" : "transparent",
               }}
             >
-              <div style={{ fontSize: 38, fontWeight: 700, color: r.color, lineHeight: 1.15 }}>{r.title}</div>
-              <div style={{ fontSize: 29, lineHeight: 1.32, marginTop: 4 }}>{r.body}</div>
-              <div style={{ fontSize: 26, lineHeight: 1.3, marginTop: 6, color: C.muted, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+              <div style={{ fontSize: 42, fontWeight: 700, color: r.color, lineHeight: 1.15 }}>{r.title}</div>
+              <div style={{ fontSize: 32, lineHeight: 1.34, marginTop: 4 }}>{r.body}</div>
+              <div style={{ fontSize: 28, lineHeight: 1.3, marginTop: 6, color: C.muted, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
                 {r.extra}
               </div>
             </div>
@@ -401,8 +401,8 @@ export const ToleranceChartScene: React.FC<{ beats?: Beats }> = ({ beats = defau
           position: "absolute",
           left: 80,
           right: 80,
-          top: 906,
-          height: 92,
+          top: 904,
+          height: 96,
           display: "flex",
           alignItems: "center",
           gap: 24,
@@ -413,12 +413,12 @@ export const ToleranceChartScene: React.FC<{ beats?: Beats }> = ({ beats = defau
           transform: `translateY(${(1 - bannerIn) * 24}px)`,
         }}
       >
-        <svg width="44" height="44" viewBox="0 0 44 44" style={{ flex: "none" }}>
+        <svg width="48" height="48" viewBox="0 0 44 44" style={{ flex: "none" }}>
           <path d="M22 4 L41 38 H3 Z" fill="none" stroke={C.client} strokeWidth="4" strokeLinejoin="round" />
           <line x1="22" y1="16" x2="22" y2="27" stroke={C.client} strokeWidth="4" strokeLinecap="round" />
           <circle cx="22" cy="33" r="2.4" fill={C.client} />
         </svg>
-        <div style={{ fontSize: 36, lineHeight: 1.2, color: C.client }}>
+        <div style={{ fontSize: 38, lineHeight: 1.25, color: C.client }}>
           <b>Hérésie méthodologique</b> : ne jamais tracer USL / LSL sur une carte de contrôle <Xbar />.
         </div>
       </div>
